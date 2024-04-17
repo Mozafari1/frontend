@@ -1,0 +1,89 @@
+.about-us-section {
+  background-color: #f8f9fa; /* Bakgrunnsfarge */
+  padding: 60px 0; /* Vertikal padding */
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: row; /* Horisontal layout på store skjermer */
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Senterer containeren i banneret */
+  padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
+
+  /* Bytter rekkefølgen slik at bildet kommer til venstre og teksten til høyre på store skjermer */
+  .about-us-image {
+    order: -1; /* Plasserer bildet før teksten i visuell rekkefølge */
+    flex: 1; /* Gir lik bredde (50%) til både tekst og bilde */
+    display: flex; /* Bruker Flexbox for å sentrere bildet */
+    justify-content: center; /* Senterer bildet horisontalt */
+    align-items: center; /* Senterer bildet vertikalt */
+
+    object {
+      max-width: 80%; /* Sørger for at bildet ikke overskrider sin container */
+      height: auto; /* Bevarer bildets aspektforhold */
+    }
+  }
+
+  .about-us-text {
+    flex: 1; /* Gir lik bredde (50%) til både tekst og bilde */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+    .about-us-image {
+      order: 0; /* Tilbakestiller rekkefølgen slik at bildet kommer etter teksten */
+      margin: 4rem auto; /* Mellomrom mellom bildet og teksten */
+    }
+  }
+}
+.about-us-text {
+  display: inline-block; /* Gjør at containeren tilpasser seg innholdets bredde */
+  text-align: left; /* Sikrer at teksten justeres til venstre innenfor containeren */
+
+  .about-us-title,
+  .about-us-description {
+    display: block; /* Gjør at elementene tar hele bredden til containeren */
+    max-width: 100%; /* Begrenser maksimal bredde til containerens bredde */
+  }
+}
+.about-us-title {
+  font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+  color: #003366; /* En sterk farge for tittelen */
+  margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
+}
+
+.about-us-description {
+  font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  color: #003366; /* En myk farge for teksten */
+  margin: auto 2.4rem auto auto; /* Mellomrom til høyre for bildet */
+}
+
+/* Medieforespørsler for mindre skjermer */
+@media (max-width: 768px) {
+  .about-us-title {
+    font-size: 1.5rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+  }
+
+  .about-us-description {
+    font-size: 1rem; /* Justerer skriftstørrelsen for beskrivelsen */
+    max-width: 100%; /* Tillater beskrivelsen å fylle tilgjengelig bredde */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-section {
+    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
+  }
+
+  .about-us-title {
+    font-size: 1.25rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
+  }
+
+  .about-us-description {
+    font-size: 0.9rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
+  }
+}

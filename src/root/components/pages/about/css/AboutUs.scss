@@ -1,0 +1,186 @@
+.about-us-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-banner {
+  width: 100%;
+  height: 18rem; /* Juster etter behov for ønsket høyde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-us-banner object {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-us-title-page {
+  position: absolute;
+  bottom: 10px; /* Juster etter behov */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #003366; /* Eller en annen farge som passer med bannerbildet */
+  font-size: 1.75rem;
+  z-index: 1;
+}
+
+.about-us-content-page {
+  padding: 40px 0; /* Vertikal padding */
+  width: 100%;
+  max-width: 700px;
+}
+.about-us-text-page {
+  display: inline-block;
+  text-align: left;
+  .title {
+    color: #003366;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1.1rem;
+  }
+  p {
+    margin: 0;
+    color: #003366;
+    font-size: 1.1rem;
+  }
+  .join {
+    margin-top: 1rem;
+  }
+  .end {
+    margin-top: 2rem;
+  }
+  ul {
+    list-style: none; /* Fjerner standard listemerking */
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 20px; /* Gir avstand mellom hvert listeelement */
+    padding-bottom: 10px; /* Litt padding i bunnen for å skape plass */
+    border-bottom: 1px solid #ccc; /* En subtil linje for å skille listeelementene */
+  }
+
+  li span:first-child {
+    display: block; /* Gjør tittelen til et eget blokkelement */
+    font-size: 1.1rem; /* En passende skriftstørrelse for tittelen */
+
+    margin-bottom: 5px; /* Litt avstand mellom tittel og beskrivelse */
+    color: #969696; /* Mørk farge for tittelen for bedre lesbarhet */
+  }
+
+  li span:last-child {
+    display: block; /* Sørger for at beskrivelsen også er sitt eget blokkelement */
+    color: #003366; /* En mykere farge for beskrivelsen for et mer subtilt utseende */
+  }
+
+  /* Ekstra stil for det siste elementet for å fjerne bunnskille */
+  li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.about-us-page-contacts {
+  display: flex;
+  flex-direction: row; /* Horisontal layout på store skjermer */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Gir litt plass mellom hvert element */
+  padding: 60px 0; /* Vertikal padding */
+
+  .contact-us {
+    background-color: #1e90ff; // Button fill color
+    color: #fff; // Button text color
+    padding: 7px 30px;
+    border-radius: 22px; // Increase border-radius for a round effect
+    text-decoration: none; // Remove underline from the link
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid #1e90ff; // Add a border to the button
+    cursor: pointer; // Change cursor to pointer on hover
+
+    &:hover {
+      color: #003366;
+      background-color: #fff; // Darken the button on hover for a subtle effect
+      transform: scale(1.05); // Slightly enlarge the button on hover
+      transform: translateY(-2px);
+    }
+  }
+}
+.customer-partner {
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .about-us-page-contacts {
+    flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+    div {
+      width: auto;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about-us-banner {
+    height: 12rem; /* Juster etter behov for ønsket høyde */
+  }
+  .about-us-title-page {
+    font-size: 1.5rem;
+  }
+  .about-us-content-page {
+    padding: 20px 0; /* Vertikal padding */
+  }
+  .about-us-text-page {
+    padding: 2rem;
+    .title {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Path: frontend/src/root/components/pages/ContactUs.scss
+.dots-container {
+  position: absolute; /* Absolutt posisjonering i forhold til .contact-section */
+  left: 20px; /* Plasser 20px fra venstre kant */
+  top: 20px; /* Plasser 20px fra toppen */
+  width: 100px; /* Juster bredde etter behov */
+  height: auto; /* Behold bildets opprinnelige aspektforhold */
+}
+
+.dots-container img {
+  width: 100%; /* Fyller bredden av containeren */
+  height: auto; /* Beholder bildets opprinnelige aspektforhold */
+}
+
+@media (max-width: 480px) {
+  .about-us-title-page {
+    font-size: 1.25rem;
+  }
+
+  .about-us-text-page {
+    padding: 2rem;
+    .title {
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

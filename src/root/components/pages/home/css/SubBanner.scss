@@ -1,0 +1,79 @@
+.unique-services-section {
+  background-color: #f8f9fa; /* En nøytral bakgrunnsfarge */
+  padding: 60px 0; /* Vertikal padding */
+  text-align: center; /* Sentrerer innholdet */
+  z-index: 1; /* Sørger for at seksjonen er foran bakgrunnsanimasjonen */
+}
+.services-content {
+  max-width: 1200px; /* Begrenser maksimal bredde for bedre lesbarhet */
+  margin: 0 auto; /* Sentrerer containeren i banneret */
+  padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
+}
+.unique-services-title {
+  font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+  color: #003366; /* En sterk farge for tittelen */
+  margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
+}
+
+.unique-services-description {
+  font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  color: #003366; /* En myk farge for teksten */
+  max-width: 670px; /* Begrenser bredden for bedre lesbarhet */
+  margin: auto; /* Sentrerer beskrivelsen */
+  padding: 0 15px; /* Legger til padding på sidene for små skjermer */
+}
+.services-images {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between; /* Fordeler mellomrom mellom elementene på store skjermer */
+  flex-wrap: wrap; /* Sørger for at elementene kan pakke på små skjermer */
+}
+
+.services-image {
+  flex-basis: calc(33.333% - 20px); /* Trekker fra eventuell margin/gap */
+  max-width: calc(33.333% - 20px); /* Justerer maksbredde tilsvarende */
+  margin: 10px; /* Gir litt mellomrom mellom bildene */
+  text-align: center; /* Sentrerer SVG-objektet */
+  object {
+    max-width: 100%; /* Sørger for at bildet ikke overskrider sin container */
+    height: auto; /* Be varer bildets aspektforhold */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-images {
+    flex-direction: column;
+    align-items: center; /* Sentrerer karusellbildet på små skjermer */
+  }
+
+  .services-image {
+    flex-basis: 100%;
+    max-width: 100%; /* Lar karusellbildet ta full bredde på små skjermer */
+  }
+}
+
+/* Medieforespørsler for mindre skjermer */
+@media (max-width: 768px) {
+  .unique-services-title {
+    font-size: 1.5rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+  }
+
+  .unique-services-description {
+    font-size: 1rem; /* Justerer skriftstørrelsen for beskrivelsen */
+    max-width: 100%; /* Tillater beskrivelsen å fylle tilgjengelig bredde */
+  }
+}
+
+@media (max-width: 480px) {
+  .unique-services-section {
+    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
+  }
+
+  .unique-services-title {
+    font-size: 1.25rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
+  }
+
+  .unique-services-description {
+    font-size: 0.9rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
+  }
+}

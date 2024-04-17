@@ -1,0 +1,23 @@
+.partner-list-section {
+  overflow: hidden;
+  padding: 40px 0;
+  background-color: #f8f9fa; /* Bakgrunnsfarge */
+
+  .partner-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .slick-slide {
+      display: flex;
+      justify-content: center; // Sentrerer logoene i hvert slide
+      align-items: center; // Midtstiller logoene vertikalt
+    }
+  }
+
+  .partner-logo {
+    max-width: 100px; // Begrenser logoens maksbredde for konsistens
+    margin: 0 15px; // Legger til litt mellomrom mellom logoene
+    height: auto; // Bevarer bildeproporsjoner
+  }
+}

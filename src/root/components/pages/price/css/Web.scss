@@ -1,0 +1,104 @@
+.price-container {
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Subtil skygge for dybde
+  max-width: 1200px;
+  color: #003366;
+  border-radius: 22px;
+  padding: 5%;
+  margin: 40px auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+
+  &2 {
+    border-right: 0.1px solid rgba(148, 144, 144, 0.185);
+  }
+
+  &_content {
+    padding: 40px;
+    flex: 1;
+
+    .card-title-price {
+      font-size: 1.75rem;
+    }
+
+    .card-sub-title-price {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .card-price {
+      font-size: 1rem;
+      font-style: italic;
+      color: gray;
+    }
+
+    .content {
+      margin: 1rem 0 0 0;
+      font-size: 1rem;
+    }
+    ul {
+      padding-inline-start: 7%;
+      margin: 10% 0;
+      list-style: none;
+      font-size: 1rem;
+      li {
+        &:before {
+          content: ""; // Nødvendig for å vise :before innholdet
+          display: inline-block;
+          width: 10px; // Størrelsen på ikonet
+          height: 10px; // Størrelsen på ikonet
+          background-color: #007bff; // Ikonfargen, kan justeres
+          border-radius: 50%; // Gjør elementet sirkulært
+          margin-right: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .price-container {
+    width: 90%;
+    padding: 1%;
+  }
+  .flex {
+    flex-direction: column;
+
+    &2 {
+      border: none;
+    }
+    &_content {
+      padding: 30px;
+      ul {
+        padding-inline-start: 4%;
+      }
+    }
+  }
+  .card-title-price {
+    font-size: 1.5rem !important;
+  }
+  .card-sub-title-price {
+    font-size: 1rem !important;
+  }
+  .card-price {
+    font-size: 0.9rem !important;
+  }
+  .content {
+    font-size: 0.9rem !important;
+    font-weight: lighter;
+  }
+  .card-ul-list-price {
+    font-size: 0.9rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .card-title-price {
+    font-size: 1.25rem !important;
+  }
+  .card-sub-title-price {
+    font-size: 0.9rem !important;
+  }
+}

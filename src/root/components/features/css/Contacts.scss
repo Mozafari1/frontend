@@ -1,0 +1,52 @@
+.dashboard-container-contacts {
+  margin-top: 20px;
+
+  button {
+    padding: 10px 30px;
+    border-radius: 20px; // Sterkt avrundede hjørner for knappen
+    border: none;
+    background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+    color: #fff;
+    border: 1px solid #1e90ff; // Legger til en subtil border
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+    &:hover {
+      background-color: #fff; // Mørkere blå farge ved hover
+      color: #1e90ff; // Hvit tekstfarge ved hover
+    }
+  }
+}
+.table-container {
+  overflow-x: auto;
+}
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  i {
+    color: #003366;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 0.5rem;
+    &:hover {
+      color: #1e90ff;
+    }
+  }
+}
+
+thead th,
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

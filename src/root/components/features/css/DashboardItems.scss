@@ -1,0 +1,72 @@
+.dashboard-container-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    i {
+      font-size: 1.5rem;
+      color: #003366;
+    }
+    div {
+      font-size: 1.2rem;
+      color: #003366;
+      font-weight: 600;
+    }
+  }
+  .card-text {
+    .count {
+      .count-text {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        color: #003366;
+        font-weight: 600;
+      }
+      .count-number {
+        font-size: 2.5rem;
+        color: #003366;
+        font-weight: 600;
+      }
+    }
+    .new {
+      .new-text {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        color: #003366;
+        font-weight: 600;
+      }
+      .new-number {
+        font-size: 2.5rem;
+        color: #003366;
+        font-weight: 600;
+      }
+    }
+    .discount {
+      .discount-text {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        color: #003366;
+        font-weight: 600;
+      }
+      .discount-number {
+        font-size: 2.5rem;
+        color: #003366;
+        font-weight: 600;
+      }
+    }
+  }
+}

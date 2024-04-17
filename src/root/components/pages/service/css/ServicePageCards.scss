@@ -1,0 +1,180 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 2rem; // Senterer kortene på siden
+  gap: 2rem; // Legger til litt mellomrom mellom kortene
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 2rem); // Standard: 3 kort per rad
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  position: relative;
+  cursor: pointer; // Endrer musepekeren til en peker
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.card.active {
+  flex: 1 1 100%; // Tar full bredde
+  max-width: 1000px; // Sørger for at kortet ikke overstiger maks bredde
+  transition: transform 0.3s ease-in-out, max-width 0.3s ease-in-out; // Glatt overgang til full bredde
+}
+.card-image {
+  border-radius: 22px;
+  height: 200px;
+  background-color: #ffffff; // Placeholder for bilder
+  pointer-events: none;
+}
+.card-button {
+  position: absolute;
+  bottom: -10px; // Plasserer knappen 10px ut av kortets bunn
+  left: 50%; // Starter fra midten av kortet
+  transform: translateX(-50%); // Sentrerer knappen nøyaktig
+  padding: 4px 14px; // Juster etter behov
+  border: none; // Fjern standard ramme
+  background-color: #1e90ff; // Eksempel: Blå bakgrunn
+  color: white; // Hvit tekst
+  border-radius: 22px; // Gjør knappen rundere
+  cursor: pointer; // Endrer musepekeren til en peker
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.01); // Legger til en lett skygge for dybdeeffekt
+  border: 1px solid #1e90ff; // Legger til en subtil ramme rundt knappen
+  &:hover {
+    color: #1e90ff;
+    background-color: #fff; // Darken the button on hover for a subtle effect
+  }
+}
+.close-button {
+  background-color: #a2a3a4; // Eksempel: Blå bakgrunn
+}
+.card-body {
+  padding: 1rem 2rem;
+  h3 {
+    font-size: 1.1rem;
+    color: #969696;
+  }
+
+  p {
+    font-size: 0.9rem; // En lesbar skriftstørrelse for teksten
+    margin-bottom: 1rem; // Øker mellomrommet for bedre lesbarhet
+    color: #003366;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; // Begrenser til 4 linjer av tekst
+    -webkit-box-orient: vertical;
+  }
+}
+.card-body.active {
+  padding: 1rem 4rem; // Øker padding for bedre lesbarhet
+  h3 {
+    font-size: 1.2rem; // Øker skriftstørrelsen for tittelen
+  }
+  p {
+    font-size: 1rem; // Øker skriftstørrelsen for teksten
+    overflow: visible; // Sørger for at hele teksten er synlig og ikke klippes
+    text-overflow: clip; // Klipper tekst uten å legge til ellipsis, men siden overflow er visible, vil all tekst vises
+    display: block; // Fjerner display -webkit-box for å deaktivere -webkit-line-clamp
+    -webkit-line-clamp: none; // Fjerner linjeklemmen
+    -webkit-box-orient: unset; // Fjerner -webkit-box-orient da den ikke er nødvendig uten -webkit-line-clamp
+  }
+  .summary {
+    border-top: 1px solid #969696;
+    padding-top: 1rem;
+  }
+}
+.card-sub-content {
+  h4 {
+    font-size: 1rem;
+    color: #969696;
+    font-style: italic;
+  }
+}
+
+// Media query for små skjermer
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; // Hvert kort tar full bredde på små skjermer
+  }
+
+  .card-image {
+    height: 150px; // Reduserer høyden på bildet for bedre lesbarhet
+  }
+  .card-body {
+    h3 {
+      font-size: 1rem; // Reduserer skriftstørrelsen for tittelen
+    }
+    p {
+      font-size: 0.9rem; // Reduserer skriftstørrelsen for teksten
+    }
+  }
+  .card-body.active {
+    padding: 1rem 2rem; // Reduserer padding for bedre lesbarhet
+    h3 {
+      font-size: 1.1rem; // Øker skriftstørrelsen for tittelen
+    }
+    h4 {
+      font-size: 0.9rem; // Øker skriftstørrelsen for undertittelen
+    }
+    p {
+      font-size: 0.9rem; // Øker skriftstørrelsen for teksten
+    }
+  }
+}
+
+.service-list-points {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 1rem;
+  li {
+    text-align: left;
+    align-items: center;
+    margin-bottom: 0.5rem; // Juster etter behov for mellomrom mellom punktene
+  }
+  .points-title {
+    /* Gir tittelen en distinkt stil, om nødvendig */
+    font-weight: bold;
+    color: #969696; // En sterk farge for tittelen
+    margin-right: 0.5rem;
+    font-size: 1rem; // En lesbar skriftstørrelse for tittelen
+    font-style: italic;
+    display: block;
+    &:before {
+      content: ""; // Nødvendig for å vise :before innholdet
+      display: inline-block;
+      width: 10px; // Størrelsen på ikonet
+      height: 2px; // Størrelsen på ikonet
+      background-color: #007bff; // Ikonfargen, kan justeres
+      margin-right: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+    }
+    &:after {
+      content: ""; // Nødvendig for å vise :after innholdet
+      display: inline-block;
+      width: 10px; // Størrelsen på ikonet
+      height: 2px; // Størrelsen på ikonet
+      background-color: #007bff; // Ikonfargen, kan justeres
+      margin-left: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+    }
+  }
+  .points-description {
+    color: #003366; // En myk farge for teksten
+    font-size: 1rem; // En lesbar skriftstørrelse for beskrivelsen
+    clear: both; // Fjerner float for å unngå overlapping
+  }
+}
+@media (max-width: 768px) {
+  .service-list-points {
+    .points-title {
+      font-size: 0.9rem; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+    }
+    .points-description {
+      font-size: 0.9rem; // Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet
+    }
+  }
+}

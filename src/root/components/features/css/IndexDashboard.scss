@@ -1,0 +1,161 @@
+.index-dashboard {
+  display: flex;
+  background: #fff;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%; // Juster bredden etter behov
+}
+
+.sidebar {
+  padding: 10px 20px 20px 20px; // Tilpas etter behov
+  width: 340px; // Bredden på menyen
+  background-color: #ffffff; // Bakgrunnsfarge for kortet
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-right: 2rem;
+}
+
+.main-content {
+  background-color: #ffffff; // Bakgrunnsfarge for kortet
+  flex: 1; // Tar resten av plassen til høyre for menyen
+  padding: 10px 20px 20px 20px; // Tilpas etter behov
+  overflow-x: hidden;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inner-sidebar {
+  padding-top: 3rem;
+
+  .user-profile {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    .avatar {
+      width: 160px; // Juster størrelsen etter behov
+      height: 160px; // Juster størrelsen etter behov
+      border-radius: 50%; // Rundt bilde
+      margin-left: calc(50% - 80px); // Sentrerer bildet
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #003366; // Farge på rammen
+      img {
+        width: 100%; // Sørger for at bildet tar hele plassen
+        height: 100%; // Sørger for at bildet tar hele plassen
+        border-radius: 50%; // Rundt bilde
+        object-fit: cover;
+      }
+      .profile-img {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        border-radius: 50%;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+        i {
+          cursor: pointer;
+          font-size: 34px;
+        }
+        i:hover {
+          color: #1e90ff; // Farge på ikonet ved hover
+        }
+      }
+    }
+    h3 {
+      font-size: 1.4rem; // Størrelsen på navnet
+      color: #003366; // Farge på navnet
+      padding-bottom: 0;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+    }
+    .email,
+    .role {
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      color: #003366; // Farge på e-post og rolle
+      font-size: 1rem; // Størrelsen på e-post og rolle
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+
+    li {
+      padding: 20px 0 20px 20px;
+      font-size: 1.1rem; // Størrelsen på teksten
+      color: #003366; // Farge på teksten
+      cursor: pointer;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+
+      &:hover {
+        color: #003366; // Farge på ikonet ved hover
+        i {
+          color: #1e90ff;
+        }
+      }
+    }
+    .active-item {
+      background-color: #f0f0f0; // Bakgrunnsfarge for aktivt element
+      color: #003366; // Farge på aktivt element
+      i {
+        color: #1e90ff; // Farge på ikonet for aktivt element
+      }
+    }
+  }
+}
+
+.main-content {
+  .main-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 1.5rem;
+      color: #003366;
+      letter-spacing: 1px;
+      margin-left: 10px;
+    }
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        padding: 10px 30px;
+        border-radius: 20px; // Sterkt avrundede hjørner for knappen
+        border: none;
+        background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+        color: #fff;
+        border: 1px solid #1e90ff; // Legger til en subtil border
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #fff; // Mørkere blå farge ved hover
+          color: #1e90ff; // Hvit tekstfarge ved hover
+        }
+      }
+      .fa-bell {
+        color: #003366;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #1e90ff;
+        }
+      }
+    }
+  }
+}

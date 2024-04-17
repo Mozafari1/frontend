@@ -1,0 +1,32 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.error-message {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+h1 {
+  font-size: 36px;
+  color: #dc3545; /* Red color for emphasis */
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #6c757d; /* Dark grey color for text */
+}
+
+a {
+  color: #007bff; /* Blue link color */
+  text-decoration: underline; /* Underline the link */
+}

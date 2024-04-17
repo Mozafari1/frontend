@@ -1,0 +1,108 @@
+.our-service {
+  padding: 60px 0; /* Vertikal padding */
+
+  .container {
+    display: flex; /* Aktiverer Flexbox */
+    align-items: center; /* Sentrerer elementene vertikalt */
+    justify-content: space-between; /* Gir plass mellom venstre og høyre side */
+    max-width: 1200px;
+    margin: 0 auto; /* Senterer containeren i banneret */
+    padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
+  }
+
+  .our-service-left,
+  .our-service-right {
+    flex: 1; // Gjør at begge sider tar lik plass i containeren
+  }
+  .our-service-right {
+    display: flex; /* Bruker Flexbox for å sentrere bildet i `.right` */
+    justify-content: center; /* Senterer bildet horisontalt */
+    align-items: center; /* Senterer bildet vertikalt */
+  }
+  .our-service-title {
+    font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+    color: #003366; /* En sterk farge for tittelen */
+    margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
+  }
+
+  .our-service-description {
+    font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+    color: #003366; /* En myk farge for teksten */
+    margin: auto; /* Sentrerer beskrivelsen */
+    margin-bottom: 2rem; // Øker mellomrommet for bedre lesbarhet
+  }
+
+  .our-service-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem; // Øker mellomrommet for bedre lesbarhet
+      color: #003366; /* En myk farge for teksten */
+      font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+      &:before {
+        content: ""; // Nødvendig for å vise :before innholdet
+        display: inline-block;
+        width: 10px; // Størrelsen på ikonet
+        height: 10px; // Størrelsen på ikonet
+        background-color: #007bff; // Ikonfargen, kan justeres
+        border-radius: 50%; // Gjør elementet sirkulært
+        margin-right: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+      }
+    }
+  }
+
+  .our-service-image {
+    display: flex;
+    justify-content: center; // Sentrerer bildet horisontalt i sin container
+    align-items: center; // Sentrerer bildet vertikalt i sin container
+
+    object {
+      max-width: 100%; // Reduserer maksimal bredde for å unngå for stort bilde
+      height: auto; // Bevarer bildets opprinnelige aspektforhold
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .our-service-title {
+    font-size: 1.5rem !important; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+  }
+
+  .our-service-description {
+    font-size: 1rem !important; /* Justerer skriftstørrelsen for beskrivelsen */
+    max-width: 100%; /* Tillater beskrivelsen å fylle tilgjengelig bredde */
+  }
+  .our-service-list li {
+    font-size: 1rem !important; // Justerer skriftstørrelsen for listen
+  }
+  .container {
+    flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+  }
+  .our-service-left,
+  .our-service-right {
+    flex: none; /* Nullstiller `flex` for å tillate naturlig bredde */
+    width: 100%; /* Setter full bredde for å fylle tilgjengelig plass */
+  }
+  .our-service-right {
+    margin-top: 4rem; // Øker mellomrommet for bedre lesbarhet
+  }
+}
+
+@media (max-width: 480px) {
+  .our-service {
+    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
+  }
+  .our-service-title {
+    font-size: 1.25rem !important; /* Reduserer skriftstørrelsen for tittelen på veldig små skjermer */
+  }
+  .our-service-description {
+    font-size: 0.9rem !important; /* Reduserer skriftstørrelsen for beskrivelsen på veldig små skjermer */
+  }
+  .our-service-list li {
+    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for listen på veldig små skjermer
+  }
+}

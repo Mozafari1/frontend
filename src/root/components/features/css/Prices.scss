@@ -1,0 +1,88 @@
+.dashboard-prices-container-page {
+  margin-top: 20px;
+  .dashboard-prices-header {
+    margin-left: 1rem;
+    button {
+      padding: 10px 30px;
+      border-radius: 20px; // Sterkt avrundede hjørner for knappen
+      border: none;
+      background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+      color: #fff;
+      border: 1px solid #1e90ff; // Legger til en subtil border
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 1rem;
+      &:hover {
+        background-color: #fff; // Mørkere blå farge ved hover
+        color: #1e90ff; // Hvit tekstfarge ved hover
+      }
+    }
+  }
+}
+
+.dashboard-container-prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+  }
+  .card-header {
+    .name {
+      font-size: 1.5rem;
+      color: #003366;
+      font-weight: 600;
+    }
+    .sub {
+      font-size: 1.1rem;
+      color: #003366;
+      font-weight: 500;
+    }
+    p {
+      padding: 0;
+      font-size: 1.1rem;
+      color: #003366;
+      margin: 0.5rem 0;
+    }
+  }
+  .card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .date-updated {
+      font-size: 1rem;
+      color: #003366;
+      .date {
+        font-weight: 600;
+      }
+    }
+    .status {
+      font-size: 1rem;
+      color: #003366;
+      .desc {
+        font-weight: 600;
+      }
+    }
+    .actions {
+      color: #003366;
+      i {
+        margin-left: 0.5rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover {
+          color: #1e90ff;
+        }
+      }
+    }
+  }
+}

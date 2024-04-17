@@ -1,0 +1,104 @@
+.footer {
+  color: #fff;
+  font-size: 0.875rem;
+  padding-top: 60px;
+  position: relative;
+
+  .footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #003366;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, #003366, #0e4166);
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  .footer-logo {
+    width: 200px;
+    cursor: pointer;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center; /* Sørger for at innholdet er sentrert horisontalt */
+    align-items: center; /* Sørger for at innholdet er sentrert vertikalt */
+    flex-wrap: wrap; /* Tillater innholdet å bryte til neste linje på små skjermer */
+    padding-bottom: 60px;
+    border-bottom: 1px solid #fff;
+
+    .footer-section {
+      flex: 1;
+      padding: 0 20px;
+      display: flex; /* Gjør .footer-section i stand til å bruke Flexbox */
+      flex-direction: column; /* Stabler elementene vertikalt */
+      justify-content: center; /* Senterer elementene vertikalt innen hver seksjon */
+      align-items: center; /* Senterer elementene horisontalt innen hver seksjon */
+
+      &:not(:last-child, :first-child) {
+        height: 80px; // Gir seksjonene en fast høyde
+        border-right: 1px solid #fff; // Legger til en skillelinje mellom seksjonene
+      }
+      p,
+      a {
+        padding: 0;
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+        color: #ccc;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .social-links {
+        i {
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 2rem;
+          color: #ccc;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: none; // Fjerner linjen under på små skjermer
+
+    .footer-section {
+      margin: 1rem auto;
+      &:not(:last-child) {
+        border-bottom: none; // Fjerner horisontale linjer mellom seksjonene
+        border-right: none; /* Fjerner vertikale linjer mellom seksjonene */
+      }
+
+      &:last-child {
+        padding-top: 20px; // Gir plass over den siste seksjonen
+      }
+    }
+  }
+}

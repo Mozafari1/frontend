@@ -1,0 +1,103 @@
+.banner {
+  background-color: #fff; /* Bakgrunnsfarge */
+  padding: 60px 0; /* Vertikal padding */
+}
+
+.banner__container {
+  display: flex; /* Aktiverer Flexbox */
+  align-items: center; /* Sentrerer elementene vertikalt */
+  justify-content: space-between; /* Gir plass mellom venstre og høyre side */
+  max-width: 1200px;
+  margin: 0 auto; /* Senterer containeren i banneret */
+  padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
+}
+
+.right {
+  display: flex; /* Bruker Flexbox for å sentrere bildet i `.right` */
+  justify-content: center; /* Senterer bildet horisontalt */
+  align-items: center; /* Senterer bildet vertikalt */
+}
+
+.right object {
+  max-width: 100%; /* Sørger for at bildet ikke overskrider sin container */
+  height: auto; /* Bevarer bildets aspektforhold */
+}
+.banner__headline {
+  font-size: 2rem; /* Stor og oppmerksomhetsvekkende skriftstørrelse for overskriften */
+  color: #003366; /* En mørk farge for kontrast og lesbarhet */
+  margin-bottom: 20px; /* Definerer mellomrom mellom overskriften og underoverskriften */
+  font-weight: 600; /* Medium til fet skrift for å legge vekt på overskriften */
+}
+
+.banner__tagline {
+  font-size: 1.25rem; /* En passende skriftstørrelse for underoverskriften for å komplementere overskriften */
+  color: #003366; /* En mykere farge for en elegant og subtil kontrast */
+  margin-bottom: 30px; /* Mellomrom før CTA-knappen */
+}
+
+.banner__services {
+  margin-top: 30px; /* Mellomrom etter CTA-knappen */
+  font-size: 1rem; /* Passende skriftstørrelse for tjenesteoversikten */
+  color: #003366; /* En myk farge for en diskret, men informativ tilstedeværelse */
+}
+
+.banner__cta {
+  font-size: 1rem; /* Tydelig og tilgjengelig skriftstørrelse for CTA-teksten */
+  color: #fff; /* Hvit tekst for høy kontrast og lesbarhet */
+  background-color: #1e90ff; /* En tiltalende og merkevaretilpasset blåfarge for knappen */
+  border: 1px solid #1e90ff; /* Fjerner standard kantlinje for et renere uttrykk */
+  padding: 10px 40px; /* Rikelig med padding for en større og mer interaktiv knapp */
+  border-radius: 50px; /* Sterkt avrundede hjørner for en moderne og vennlig form */
+  cursor: pointer; /* Endrer musepeker til håndpeker for å indikere klikkbarhet */
+  transition: background-color 0.3s ease; /* En glatt overgangseffekt for hover-tilstand */
+  a {
+    text-decoration: none; /* Fjerner standard understrek for en renere knapp */
+    color: #fff; /* Hvit tekst for høy kontrast og lesbarhet */
+  }
+  &:hover {
+    a {
+      color: #1e90ff; /* Knappens farge for høy kontrast og lesbarhet */
+    }
+    background-color: #fff; /* En mørkere nyanse av knappens farge for hover-effekt */
+    color: #1e90ff; /* Knappens farge for høy kontrast og lesbarhet */
+    transform: scale(1.05); // Slightly enlarge the button on hover
+    transform: translateY(
+      -2px
+    ); /* Løfter knappen litt for å gi en følelse av interaksjon */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__headline {
+    font-size: 1.5rem;
+  }
+  .banner__tagline {
+    font-size: 1.1rem; /* Litt mindre skriftstørrelse på mindre skjermer */
+    line-height: 1.3; /* Juster linjehøyden for bedre lesbarhet */
+  }
+  .banner__container {
+    flex-direction: column; /* Stabler `.left` og `.right` vertikalt på små skjermer */
+  }
+
+  .left,
+  .right {
+    flex: none; /* Nullstiller `flex` for å tillate naturlig bredde */
+    width: 100%; /* Setter full bredde for å fylle tilgjengelig plass */
+  }
+
+  .right {
+    margin-top: 4rem; /* Legger til mellomrom mellom tekst og bilde på små skjermer */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner__headline {
+    font-size: 1.25rem;
+  }
+  .banner__tagline {
+    font-size: 1rem; /* Reduserer skriftstørrelsen ytterligere for veldig små skjermer */
+  }
+  .banner__cta {
+    padding: 10px 30px; /* Reduserer padding for veldig små skjermer */
+  }
+}

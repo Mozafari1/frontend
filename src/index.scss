@@ -1,0 +1,31 @@
+// this is the main file that will be compiled to css
+// Dodgerblue #1E90FF icon color
+// midnightblue #003366 text color
+// background-color: #f8f9fa; /* En nøytral bakgrunnsfarge */
+body {
+  font-family: "Avenir Heavy", "Avenir Next", "Avenir", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.icons-left {
+  margin-right: 0.5rem;
+}
+.icons-right {
+  margin-left: 0.5rem;
+}
+html {
+  font-size: 100%; /* 16px by default */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Reduserer skriftstørrelsen for mindre skjermer */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 80%; /* Enda mindre skriftstørrelse for veldig små skjermer */
+  }
+}

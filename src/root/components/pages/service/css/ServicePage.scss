@@ -1,0 +1,69 @@
+.service-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-banner {
+  width: 100%;
+  height: 18rem; /* Juster etter behov for ønsket høyde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-banner object {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.service-title-page {
+  position: absolute;
+  bottom: 10px; /* Juster etter behov */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #003366; /* Eller en annen farge som passer med bannerbildet */
+  font-size: 2rem;
+  z-index: 1;
+  font-size: 1.75rem;
+}
+.service-main-content-page {
+  padding: 40px 0; /* Vertikal padding */
+  width: 100%;
+  max-width: 700px;
+  color: #003366; /* Eller en annen farge som passer med bannerbildet */
+}
+.service-main-text-page {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .service-banner {
+    height: 12rem; /* Juster etter behov for ønsket høyde */
+  }
+  .service-title-page {
+    font-size: 1.5rem;
+  }
+  .service-main-content-page {
+    padding: 20px 0; /* Vertikal padding */
+  }
+  .service-main-text-page {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-title-page {
+    font-size: 1.25rem;
+  }
+  .service-main-text-page {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,132 @@
+.add-edit-file {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Bakgrunnsfarge for overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-edit-card-file {
+  background-color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05); /* Skyggeeffekt for kortet */
+  max-width: 800px; /* Juster bredden etter behov */
+  width: 100%;
+  padding: 20px;
+  .card-header-file {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: 600;
+    i {
+      cursor: pointer;
+      margin-top: -40px;
+      margin-right: -20px;
+      background: #f0f0f0f0;
+      padding: 5px 10px;
+      border-radius: 0 22px 0 0;
+    }
+    i:hover {
+      color: #1e90ff;
+    }
+    .head {
+      margin-left: 1rem;
+    }
+  }
+  input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    font-size: 12px;
+    font-size: normal;
+    color: #003366;
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    &:hover {
+      border-color: #007bff;
+    }
+  }
+}
+
+.form-file {
+  .select-options {
+    .css-13cymwt-control,
+    .css-t3ipsp-control {
+      font-size: 12px; // Mindre font-størrelse for Select-komponenten
+      font-weight: normal;
+      color: #003366; // Tekstfarge for Select-komponenten
+      font: -webkit-control;
+      border-radius: 22px; // Avrundede hjørner for Select-komponenten
+      border: 1px solid #ccc;
+      padding: 0;
+
+      &:hover {
+        border-color: #007bff; // Endrer border-farge ved hover
+      }
+    }
+    .css-1dimb5e-singleValue {
+      font-size: 12px; // Mindre font-størrelse for Select-komponenten
+      font-weight: normal;
+      color: #003366; // Tekstfarge for Select-komponenten
+      font: -webkit-control;
+    }
+    .css-1nmdiq5-menu {
+      font-size: 12px; // Mindre font-størrelse for menyen
+      font-weight: normal;
+      font: -webkit-control;
+      color: #003366; // Tekstfarge for menyen
+    }
+  }
+  padding: 20px 30px 20px 20px;
+  .file input {
+    margin: 1rem auto;
+    padding: 8px 0 8px 10px;
+    margin-right: 10px;
+    width: calc(100% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 22px; // Avrundede hjørner for input-feltene
+    font-size: 12px;
+    font-size: normal;
+    color: #003366; // Tekstfarge for input-feltene
+    &:focus {
+      border-color: #007bff; // Endrer border-farge ved fokus
+      outline: none; // Fjerner standard outline
+    }
+    &:hover {
+      border-color: #007bff; // Endrer border-farge ved hover
+    }
+  }
+  .file-name {
+    margin-top: 1rem;
+  }
+  .special-type-input {
+    margin-bottom: 1rem;
+    input {
+      margin: 0;
+      padding: 10px 0 10px 10px;
+      width: calc(100% - 10px);
+    }
+  }
+}
+.image-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 22px; // Avrundede hjørner for bilde
+  }
+}

@@ -1,0 +1,89 @@
+.customer-section {
+  background-color: #f8f9fa; /* Bakgrunnsfarge */
+  overflow: hidden;
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Sentrerer barn-elementer (inkludert karusellen) horisontalt
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .customer-section-text {
+    margin: 0 auto; // Sentrerer teksten horisontalt
+    text-align: center; // Sentrerer teksten horisontalt
+    max-width: 660px; // Begrenser bredden for bedre lesbarhet
+    margin-bottom: 2rem; // Øker mellomrommet for bedre lesbarhet
+  }
+  .customer-section__title {
+    font-size: 1.75rem; // En passende skriftstørrelse for tittelen
+    color: #003366; // En sterk farge for tittelen
+    margin-bottom: 25px; // Mellomrom mellom tittelen og beskrivelsen
+  }
+  .customer-section__description {
+    font-size: 1.1rem; // En lesbar skriftstørrelse for beskrivelsen
+    color: #003366; // En myk farge for teksten
+  }
+  .carosel-customer {
+    width: 100%;
+    .slick-slide {
+      display: flex;
+      justify-content: center; // Sentrerer kortene innenfor hver slide
+    }
+  }
+
+  .feedback-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 10px; // Sørger for litt plass mellom kortene når det er mer enn ett
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 300px; // Maksimal bredde for hvert kort
+    height: 140px;
+    // Sentrerer kortet horisontalt om det er kun ett kort i visningen
+    margin-left: auto;
+    margin-right: auto;
+
+    .feedback-text {
+      font-size: 0.8rem; // En lesbar skriftstørrelse for teksten
+      margin-bottom: 1rem; // Øker mellomrommet for bedre lesbarhet
+      color: #003366;
+    }
+    .feedback-author {
+      font-size: 0.9rem; // En lesbar skriftstørrelse for forfatteren
+      color: #969696;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-section .carosel-customer .slick-list {
+    // Gjør at karusellens liste tar full bredde, viktig for å håndtere sentrering av kort
+    width: 100%;
+  }
+  .customer-section .carosel-customer .slick-track {
+    // Forhindrer at karusellens spor forsøker å ta minimal plass, som kan forstyrre sentrering
+    align-items: center;
+  }
+  .customer-section {
+    &__title {
+      font-size: 1.5rem !important; // Øker skriftstørrelsen for tittelen på store skjermer
+    }
+    .customer-section__description {
+      max-width: 100%; // Tillater beskrivelsen å fylle tilgjengelig bredde
+      font-size: 1rem; // Reduserer skriftstørrelsen for beskrivelsen på store skjermer
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .customer-section {
+    &__title {
+      font-size: 1.25rem !important; // Øker skriftstørrelsen for tittelen på mindre skjermer
+    }
+    .customer-section__description {
+      font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
+    }
+  }
+}

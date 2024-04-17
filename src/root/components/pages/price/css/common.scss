@@ -1,0 +1,127 @@
+.single-card-containers {
+  display: flex;
+  flex-wrap: wrap; /* Sørger for at elementene kan flytte seg under hverandre på små skjermer */
+  justify-content: space-between; /* Gir litt mellomrom mellom kortene */
+  max-width: 1200px;
+  margin: 0 auto; /* Senterer kortene horisontalt */
+}
+
+.single-card-container {
+  flex: 1;
+  background-color: hsl(0, 20%, 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Subtil skygge for dybde
+  color: #003366;
+  border-radius: 22px;
+  margin: 40px 20px; /* Senterer kortene horisontalt */
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Senterer innholdet vertikalt */
+
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: -20px;
+    background: #f8f9fa;
+    height: 42px;
+    width: 42px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.7s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(46);
+  }
+}
+
+.single-card-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  .card-title-price {
+    font-size: 1.75rem;
+  }
+
+  .card-sub-title-price {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .card-price {
+    font-size: 1rem;
+    font-style: italic;
+    color: gray;
+  }
+
+  .content {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+  }
+  ul {
+    padding-inline-start: 7%;
+    margin: 10% 0;
+    list-style: none;
+    font-size: 1rem;
+    li {
+      &:before {
+        content: ""; // Nødvendig for å vise :before innholdet
+        display: inline-block;
+        width: 10px; // Størrelsen på ikonet
+        height: 10px; // Størrelsen på ikonet
+        background-color: #007bff; // Ikonfargen, kan justeres
+        border-radius: 50%; // Gjør elementet sirkulært
+        margin-right: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+      }
+    }
+  }
+  .additional-costs-notice,
+  .note {
+    font-size: 1rem;
+    font-style: italic;
+    color: gray;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-card-container {
+    flex-basis: 100%; /* Hvert kort tar full bredde på små skjermer */
+    margin: 40px 20px;
+  }
+
+  .card-title-price {
+    font-size: 1.5rem;
+  }
+  .card-sub-title-price {
+    font-size: 1rem;
+  }
+  .card-price {
+    font-size: 0.9rem;
+  }
+  .content {
+    font-size: 0.9rem;
+    font-weight: lighter;
+  }
+  .card-ul-list-price {
+    font-size: 0.9rem;
+  }
+  .additional-costs-notice,
+  .note {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .card-title-price {
+    font-size: 1.25rem;
+  }
+  .card-sub-title-price {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,194 @@
+.price-us-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-us-banner {
+  width: 100%;
+  height: 18rem; /* Juster etter behov for ønsket høyde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.price-us-banner object {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price-us-title-page {
+  position: absolute;
+  bottom: 24%; /* Juster etter behov */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #003366; /* Eller en annen farge som passer med bannerbildet */
+  font-size: 1.75rem;
+  z-index: 1;
+}
+
+.price-us-content-page {
+  padding: 40px 0; /* Vertikal padding */
+  width: 100%;
+  max-width: 700px;
+  .price-us-text-page {
+    text-align: left;
+    display: inline-block;
+    p {
+      margin: 0;
+      color: #003366;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.custom-shape-divider-bottom-1708374905 {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1708374905 svg {
+  position: relative;
+  display: block;
+  width: calc(126% + 1.3px);
+  height: 274px;
+}
+
+.custom-shape-divider-bottom-1708374905 .shape-fill {
+  fill: #f8f9fa;
+}
+
+.price-web {
+  position: relative;
+  .custom-shape-divider-bottom-1708449623 {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1708449623 svg {
+    position: relative;
+    display: block;
+    width: calc(164% + 1.3px);
+    height: 500px;
+  }
+
+  .custom-shape-divider-bottom-1708449623 .shape-fill {
+    fill: #f8f9fa;
+  }
+}
+.price-appapi {
+  position: relative;
+  .custom-shape-divider-bottom-1708452161 {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1708452161 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 500px;
+  }
+
+  .custom-shape-divider-bottom-1708452161 .shape-fill {
+    fill: #f8f9fa;
+  }
+}
+.price-digital-marketing {
+  position: relative;
+  .custom-shape-divider-bottom-1708452608 {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1708452608 svg {
+    position: relative;
+    display: block;
+    width: calc(163% + 1.3px);
+    height: 500px;
+  }
+
+  .custom-shape-divider-bottom-1708452608 .shape-fill {
+    fill: #f8f9fa;
+  }
+}
+.price-branding {
+  margin-bottom: 60px;
+  position: relative;
+  .custom-shape-divider-bottom-1708452414 {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1708452414 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 500px;
+  }
+
+  .custom-shape-divider-bottom-1708452414 .shape-fill {
+    fill: #f8f9fa;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-us-banner {
+    height: 12rem; /* Juster etter behov for ønsket høyde */
+  }
+  .price-us-title-page {
+    font-size: 1.5rem;
+  }
+  .price-us-content-page {
+    padding: 20px 0; /* Vertikal padding */
+  }
+  .price-us-text-page {
+    padding: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .price-us-title-page {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

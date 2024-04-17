@@ -1,0 +1,198 @@
+.contact-section {
+  background-color: #f0f5ff; /* Bakgrunnsfarge */
+  padding-bottom: 60px; /* Vertikal padding */
+  .tilt-shape {
+    padding: 60px 0; /* Vertikal padding */
+    position: relative;
+    .custom-shape-divider-top-1708454110 {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-top-1708454110 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 500px;
+      transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-top-1708454110 .shape-fill {
+      fill: #f8f9fa;
+    }
+  }
+  .contact-form-container-main {
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    border-radius: 22px; // Avrundede hjørner for form-containeren
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Subtil skygge for dybde
+    max-width: 800px;
+    margin: 0 auto; // Sentrerer containeren
+    padding: 40px; // Innvendig padding for luft rundt skjemaelementene
+
+    .contact-us-title {
+      text-align: center;
+      margin-bottom: 25px; // Avstand mellom tittelen og skjemaet
+      color: #003366;
+      font-size: 1.75rem;
+    }
+    .contact-intro {
+      font-size: 0.9rem; /* En lesbar skriftstørrelse for beskrivelsen */
+      color: #003366; /* En myk farge for teksten */
+      margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
+    }
+
+    .contact-form {
+      width: 100%;
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between; // Gir plass mellom feltene
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      width: calc(50% - 1rem); // 50% bredde for input-feltene
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      padding: 11px;
+      margin: 8px;
+      border: 1px solid #ccc;
+      border-radius: 22px;
+      font-size: 12px;
+      font-size: normal;
+      color: #003366;
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+      &:hover {
+        border-color: #007bff;
+      }
+    }
+    .message-area {
+      width: calc(100% - 1rem);
+      textarea {
+        width: calc(100% - 24px); // 100% bredde for tekst-feltet
+        height: 6rem;
+        margin: 0 8px;
+        padding: 11px;
+        border: 1px solid #ccc;
+        color: #003366; // Tekstfarge for tekst-feltet
+        border-radius: 22px;
+        font-size: 12px;
+        font-size: normal;
+        font: -webkit-control;
+        resize: vertical;
+        &:focus {
+          border-color: #007bff; // Endrer border-farge ved fokus
+          outline: none; // Fjerner standard outline
+        }
+        &:hover {
+          border-color: #007bff; // Endrer border-farge ved hover
+        }
+      }
+    }
+
+    .form-field:not(.half-width) {
+      margin-top: 20px; // Avstand mellom radene
+    }
+
+    .select-service {
+      .css-13cymwt-control,
+      .css-t3ipsp-control {
+        margin: 8px;
+        padding: 0;
+        font-size: 11px; // Mindre font-størrelse for Select-komponenten
+        font-weight: normal;
+        color: #003366; // Tekstfarge for Select-komponenten
+        font: -webkit-control;
+        border-radius: 22px; // Avrundede hjørner for Select-komponenten
+        border: 1px solid #ccc;
+        &:hover {
+          border-color: #007bff; // Endrer border-farge ved hover
+        }
+      }
+      .css-13cymwt-control {
+        max-height: 37px;
+        min-height: 37px;
+      }
+      .css-1dimb5e-singleValue {
+        font-size: 12px; // Mindre font-størrelse for Select-komponenten
+        font-weight: normal;
+        color: #003366; // Tekstfarge for Select-komponenten
+        font: -webkit-control;
+      }
+      .css-1nmdiq5-menu {
+        font-size: 12px; // Mindre font-størrelse for menyen
+        font-weight: normal;
+        font: -webkit-control;
+        color: #003366; // Tekstfarge for menyen
+      }
+    }
+
+    .form-submit {
+      margin-top: 30px; // Avstand mellom siste felt og send-knappen
+      display: flex;
+      justify-content: center; // Sentrerer send-knappen
+
+      button {
+        padding: 10px 30px;
+        border-radius: 20px; // Sterkt avrundede hjørner for knappen
+        border: none;
+        background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+        color: #fff;
+        border: 1px solid #1e90ff; // Legger til en subtil border
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #fff; // Mørkere blå farge ved hover
+          color: #1e90ff; // Hvit tekstfarge ved hover
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    padding: 20px; // Reduserer padding for mindre skjermer
+    margin: 0 10px !important;
+  }
+  .contact-form {
+    .form-row {
+      flex-direction: column; // Stabler feltene vertikalt på mindre skjermer
+      .form-field {
+        width: 100% !important; // Full bredde for input-feltene
+      }
+    }
+  }
+  .contact-us-title {
+    font-size: 1.5rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+  }
+  .contact-intro {
+    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
+  }
+}
+@media (max-width: 480px) {
+  .contact-us-title {
+    font-size: 1.25rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+  }
+  .contact-intro {
+    font-size: 0.8rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
+  }
+}

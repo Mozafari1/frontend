@@ -1,0 +1,86 @@
+.feedback-page {
+  height: 100vh;
+
+  .feedback-card {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Skyggeeffekt for kortet */
+    max-width: 800px; /* Juster bredden etter behov */
+    width: 100%;
+    padding: 20px;
+    .header {
+      padding: 20px 30px 0px 20px;
+    }
+    .title {
+      color: #003366;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .message {
+      color: #003366;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .form-feedback {
+      padding: 20px 30px 20px 20px;
+    }
+
+    .form-feedback div {
+      label {
+        margin-left: 0.5rem;
+      }
+      margin-bottom: 10px;
+    }
+
+    .form-feedback input,
+    .form-feedback textarea {
+      margin: 0.1rem auto;
+      width: 100%;
+      padding: 10px 0 10px 10px;
+      border: 1px solid #ccc;
+      border-radius: 22px; // Avrundede hjørner for input-feltene
+      font-size: 12px;
+      font-size: normal;
+      color: #003366; // Tekstfarge for input-feltene
+      &:focus {
+        border-color: #007bff; // Endrer border-farge ved fokus
+        outline: none; // Fjerner standard outline
+      }
+      &:hover {
+        border-color: #007bff; // Endrer border-farge ved hover
+      }
+    }
+    .form-feedback textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-feedback button {
+      margin: 0.5rem;
+      padding: 10px 30px;
+      border-radius: 20px; // Sterkt avrundede hjørner for knappen
+      border: none;
+      background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+      color: #fff;
+      border: 1px solid #1e90ff; // Legger til en subtil border
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      .fa-arrow-left {
+        margin-right: 0.5rem;
+      }
+      .fa-arrow-right {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        background-color: #fff; // Mørkere blå farge ved hover
+        color: #1e90ff; // Hvit tekstfarge ved hover
+      }
+    }
+  }
+}

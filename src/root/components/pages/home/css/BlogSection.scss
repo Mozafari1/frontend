@@ -1,0 +1,127 @@
+.news-section {
+  overflow: hidden;
+
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Sentrerer barn-elementer (inkludert karusellen) horisontalt
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .news-section-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .news-section-title {
+    font-size: 1.75rem; // En passende skriftstørrelse for tittelen
+    color: #003366; // En sterk farge for tittelen
+    margin-bottom: 25px; // Mellomrom mellom tittelen og beskrivelsen
+  }
+  .news-section-description {
+    font-size: 1.1rem; // En lesbar skriftstørrelse for beskrivelsen
+    color: #003366; // En myk farge for teksten
+    max-width: 670px;
+  }
+  .news-carousel {
+    width: 100%;
+    .slick-slide {
+      display: flex;
+      justify-content: center; // Sentrerer kortene innenfor hver slide
+    }
+  }
+
+  .news-card {
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 340px; // Maksimal bredde for hvert kort
+    margin-left: auto;
+    margin-right: auto;
+    height: 330px; // Maksimal høyde for hvert kort
+    border-radius: 22px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease-in-out;
+    }
+    .news-image {
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+
+      width: 100%;
+      height: 200px; // En fast høyde for bildet
+      object-fit: cover; // Skalerer bildet for å fylle rammen
+    }
+    .news-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem; // En lesbar skriftstørrelse for teksten
+      margin-bottom: 1rem; // Øker mellomrommet for bedre lesbarhet
+      color: #003366;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // Begrenser til 4 linjer av tekst
+      -webkit-box-orient: vertical;
+    }
+    .news-title {
+      padding: 0 1rem; // Øker mellomrommet for bedre lesbarhet
+      font-size: 0.8rem; // En lesbar skriftstørrelse for forfatteren
+      color: #969696;
+    }
+  }
+  .card-button-read-more {
+    position: absolute;
+    bottom: -10px; // Plasserer knappen 10px ut av kortets bunn
+    left: 50%; // Starter fra midten av kortet
+    transform: translateX(-50%); // Sentrerer knappen nøyaktig
+    padding: 4px 14px; // Juster etter behov
+    border: none; // Fjern standard ramme
+    background-color: #1e90ff; // Eksempel: Blå bakgrunn
+    color: white; // Hvit tekst
+    border-radius: 22px; // Gjør knappen rundere
+    cursor: pointer; // Endrer musepekeren til en peker
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.01); // Legger til en lett skygge for dybdeeffekt
+    border: 1px solid #1e90ff; // Legger til en subtil ramme rundt knappen
+    &:hover {
+      color: #1e90ff;
+      background-color: #fff; // Darken the button on hover for a subtle effect
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .news-section .news-carousel .slick-list {
+    // Gjør at karusellens liste tar full bredde, viktig for å håndtere sentrering av kort
+    width: 100%;
+  }
+  .news-section .news-carousel .slick-track {
+    // Forhindrer at karusellens spor forsøker å ta minimal plass, som kan forstyrre sentrering
+    align-items: center;
+  }
+
+  .news-section-title {
+    font-size: 1.5rem !important; // Øker skriftstørrelsen for tittelen på store skjermer
+  }
+  .news-title {
+    max-width: 100%; // Tillater beskrivelsen å fylle tilgjengelig bredde
+    font-size: 1rem !important; // Reduserer skriftstørrelsen for beskrivelsen på store skjermer
+  }
+  .news-content {
+    font-size: 0.8rem !important; // Øker skriftstørrelsen for teksten på store skjermer
+  }
+}
+
+@media (max-width: 480px) {
+  .news-section-title {
+    font-size: 1.25rem !important; // Ytterligere reduksjon av skriftstørrelsen for tittelen
+  }
+  .news-content {
+    font-size: 0.8rem; // Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet
+  }
+}

@@ -1,0 +1,64 @@
+.privacy-us-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.privacy-us-banner {
+  width: 100%;
+  height: 18rem; /* Juster etter behov for ønsket høyde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.privacy-us-banner object {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.privacy-contents {
+  padding: 40px 0; /* Vertikal padding */
+  width: 100%;
+  max-width: 700px;
+}
+.privacy-title-page {
+  font-size: 1.75rem;
+  color: #003366; /* Eller en annen farge som passer med bannerbildet */
+  bottom: 10px; /* Juster etter behov */
+}
+.privacy-title-page1 {
+  font-size: 1.5rem;
+  color: #003366;
+}
+.privacy-subtitle {
+  font-size: 1.3rem;
+  color: #003366;
+}
+.privacy-text-page {
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+@media (max-width: 768px) {
+  .privacy-us-banner {
+    height: 12rem; /* Juster etter behov for ønsket høyde */
+  }
+  .privacy-title-page {
+    font-size: 1.25rem;
+  }
+  .privacy-title-page1 {
+    font-size: 1.1rem;
+  }
+  .privacy-subtitle {
+    font-size: 1rem;
+  }
+  .privacy-text-page {
+    font-size: 1rem;
+  }
+}

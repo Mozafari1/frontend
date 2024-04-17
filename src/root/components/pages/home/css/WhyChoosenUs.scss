@@ -1,0 +1,124 @@
+.why-us-section {
+  padding: 60px 0; /* Vertikal padding */
+}
+
+.why-us-container {
+  display: flex; /* Aktiverer Flexbox */
+  align-items: center; /* Sentrerer elementene vertikalt */
+  justify-content: space-between; /* Gir plass mellom venstre og høyre side */
+  max-width: 1200px;
+  margin: 0 auto; /* Senterer containeren i banneret */
+  padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
+}
+
+.why-us-left-content,
+.why-us-right-content {
+  flex: 1; /* Gir like mye plass til både venstre og høyre side */
+}
+
+.why-us-right-content {
+  margin-top: 2rem; /* Legger til litt mellomrom mellom tekst og bilde på små skjermer */
+  display: flex; /* Bruker Flexbox for å sentrere bildet i `.right` */
+  justify-content: center; /* Senterer bildet horisontalt */
+  align-items: center; /* Senterer bildet vertikalt */
+}
+
+@media (max-width: 768px) {
+  .why-us-container {
+    flex-direction: column; /* Stabler `.left` og `.right` vertikalt på små skjermer */
+  }
+
+  .why-us-left-content,
+  .why-us-right-content {
+    flex: none; /* Nullstiller `flex` for å tillate naturlig bredde */
+    width: 100%; /* Setter full bredde for å fylle tilgjengelig plass */
+  }
+}
+
+.why-us-title {
+  font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+  color: #003366; /* En sterk farge for tittelen */
+  margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
+}
+
+.why-us-description {
+  font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  color: #003366; /* En myk farge for teksten */
+  max-width: 700px; /* Begrenser bredden for bedre lesbarhet */
+  margin: auto 2.4rem auto auto; /* Mellomrom til høyre for bildet */
+}
+
+.why-us-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-us-list li {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Juster etter behov for mellomrom mellom punktene */
+  &:before {
+    content: ""; // Nødvendig for å vise :before innholdet
+    display: inline-block;
+    width: 10px; // Størrelsen på ikonet
+    height: 10px; // Størrelsen på ikonet
+    background-color: #007bff; // Ikonfargen, kan justeres
+    border-radius: 50%; // Gjør elementet sirkulært
+    margin-right: 10px; // Legger til litt mellomrom mellom ikonet og teksten
+  }
+}
+
+.li-title {
+  /* Gir tittelen en distinkt stil, om nødvendig */
+  font-weight: bold;
+  color: #003366; /* En sterk farge for tittelen */
+  margin-right: 0.5rem;
+  font-size: 1.1rem; /* En lesbar skriftstørrelse for tittelen */
+}
+
+.li-description {
+  /* Stil for beskrivelsen, om nødvendig */
+  display: block; /* Gjør at beskrivelsen starter på en ny linje under tittelen */
+  color: #003366; /* En myk farge for teksten */
+  font-size: 0.9rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .why-us-title {
+    font-size: 1.5rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+  }
+
+  .why-us-description {
+    font-size: 1rem; /* Justerer skriftstørrelsen for beskrivelsen */
+    max-width: 100%; /* Tillater beskrivelsen å fylle tilgjengelig bredde */
+  }
+  .li-title {
+    font-size: 1rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+  }
+
+  .li-description {
+    font-size: 0.9rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
+  }
+}
+
+@media (max-width: 480px) {
+  .why-us-section {
+    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
+  }
+
+  .why-us-title {
+    font-size: 1.25rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
+  }
+
+  .why-us-description {
+    font-size: 0.9rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
+  }
+  .li-title {
+    font-size: 0.8rem; /* Mindre skriftstørrelse for tittelen for bedre lesbarhet */
+  }
+  .li-description {
+    font-size: 0.8rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
+  }
+}

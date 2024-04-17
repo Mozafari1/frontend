@@ -1,0 +1,137 @@
+.add-edit-service {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Bakgrunnsfarge for overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-edit-card-service {
+  background-color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05); /* Skyggeeffekt for kortet */
+  max-width: 800px; /* Juster bredden etter behov */
+  width: 100%;
+  padding: 20px;
+  .card-header-service {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: 600;
+    i {
+      cursor: pointer;
+      margin-top: -40px;
+      margin-right: -20px;
+      background: #f0f0f0f0;
+      padding: 5px 10px;
+      border-radius: 0 22px 0 0;
+    }
+    i:hover {
+      color: #1e90ff;
+    }
+    .head {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.form-service {
+  padding: 20px 30px 20px 20px;
+}
+
+.form-service div {
+  label {
+    margin-left: 0.5rem;
+  }
+  margin-bottom: 10px;
+}
+
+.form-service input,
+.form-service textarea {
+  margin: 0.1rem auto;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 22px; // Avrundede hjørner for input-feltene
+  font-size: 12px;
+  font-size: normal;
+  color: #003366; // Tekstfarge for input-feltene
+  &:focus {
+    border-color: #007bff; // Endrer border-farge ved fokus
+    outline: none; // Fjerner standard outline
+  }
+  &:hover {
+    border-color: #007bff; // Endrer border-farge ved hover
+  }
+}
+.image-input input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.1rem auto;
+  width: 100%;
+  padding: 7px 0 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 22px; // Avrundede hjørner for input-feltene
+  font-size: 12px;
+  font-size: normal;
+  color: #003366; // Tekstfarge for input-feltene
+  &:focus {
+    border-color: #007bff; // Endrer border-farge ved fokus
+    outline: none; // Fjerner standard outline
+  }
+  &:hover {
+    border-color: #007bff; // Endrer border-farge ved hover
+  }
+}
+
+.profile-image input {
+  width: 100%;
+  padding: 7px 0 7px 10px;
+  border-radius: 22px; // Avrundede hjørner for input-feltene
+  font-size: 12px;
+  font-size: normal;
+  color: #003366; // Tekstfarge for input-feltene
+  &:focus {
+    border-color: #007bff; // Endrer border-farge ved fokus
+    outline: none; // Fjerner standard outline
+  }
+  &:hover {
+    border-color: #007bff; // Endrer border-farge ved hover
+  }
+}
+
+.form-service textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.form-service button {
+  margin: 0.5rem;
+  padding: 10px 30px;
+  border-radius: 20px; // Sterkt avrundede hjørner for knappen
+  border: none;
+  background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+  color: #fff;
+  border: 1px solid #1e90ff; // Legger til en subtil border
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  .fa-arrow-left {
+    margin-right: 0.5rem;
+  }
+  .fa-arrow-right {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    background-color: #fff; // Mørkere blå farge ved hover
+    color: #1e90ff; // Hvit tekstfarge ved hover
+  }
+}

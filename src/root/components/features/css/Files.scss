@@ -1,0 +1,91 @@
+.dashboard-container-files {
+  margin-top: 20px;
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  button {
+    padding: 10px 30px;
+    border-radius: 20px; // Sterkt avrundede hjørner for knappen
+    border: none;
+    background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+    color: #fff;
+    border: 1px solid #1e90ff; // Legger til en subtil border
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+    &:hover {
+      background-color: #fff; // Mørkere blå farge ved hover
+      color: #1e90ff; // Hvit tekstfarge ved hover
+    }
+  }
+}
+.dashboard-files-container {
+  display: flex;
+}
+
+.category-tabs {
+  display: flex;
+}
+.category-tab {
+  padding: 10px 20px;
+  margin: 0 1px;
+  background-color: #f0f0f0;
+  border-radius: 22px 22px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #003366;
+}
+
+.category-tab:hover {
+  background-color: #e0e0e0;
+  color: #1e90ff;
+}
+
+.category-tab.active {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.category-tab:first-child {
+  margin-left: 0;
+}
+
+.category-tab:last-child {
+  margin-right: 0;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  i {
+    color: #003366;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 0.5rem;
+    &:hover {
+      color: #1e90ff;
+    }
+  }
+}
+
+thead th,
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

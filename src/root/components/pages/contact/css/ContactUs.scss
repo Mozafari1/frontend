@@ -1,0 +1,230 @@
+//Animation
+.contact-us-page {
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  position: relative; /* Posisjonerer kontaktinformasjonen over bakgrunn */
+  z-index: 0;
+}
+.contact-card {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap; /* Sørger for at elementene stables på små skjermer */
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  overflow: hidden; /* Holder alt innenfor de avrundede hjørnene */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row; /* Standard layout er horisontal */
+  width: 100%;
+}
+
+.image-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Juster etter behov */
+}
+
+.image-left img {
+  width: 100%; /* Eller en annen prosentandel for å kontrollere størrelsen */
+  max-width: 500px; /* Maks bredde på bildet for å unngå at det blir for stort */
+  height: auto; /* Sørger for at bildets høyde justeres automatisk */
+}
+.form-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.welcome-message h2 {
+  margin-bottom: 25px; // Avstand mellom tittelen og skjemaet
+  color: #003366;
+  font-size: 1.75rem;
+}
+
+.welcome-message p {
+  font-size: 1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  color: #003366; /* En myk farge for teksten */
+  margin-bottom: 25px;
+}
+.optional-contact {
+  margin: 40px 0;
+
+  .or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: grey;
+    font-size: 0.8rem;
+    position: relative;
+    font-weight: lighter;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 40%;
+      background: #1e90ff;
+      position: absolute;
+      top: 50%;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1rem;
+    color: #003366;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: row; /* Horisontal layout på store skjermer */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px; /* Gir litt plass mellom hvert element */
+    .contact-us {
+      background-color: #1e90ff; // Button fill color
+      color: #fff; // Button text color
+      padding: 7px 25px;
+      border-radius: 22px; // Increase border-radius for a round effect
+      text-decoration: none; // Remove underline from the link
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 1px solid #1e90ff; // Add a border to the button
+
+      &:hover {
+        color: #003366;
+        background-color: #fff; // Darken the button on hover for a subtle effect
+        transform: scale(1.05); // Slightly enlarge the button on hover
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.contact-form-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-page input,
+.contact-form-page textarea {
+  width: 92% !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 22px; // Avrundede hjørner for input-feltene
+  font-size: 12px;
+  font-size: normal;
+  color: #003366; // Tekstfarge for input-feltene
+  margin: 8px 0 !important;
+  &:focus {
+    border-color: #007bff; // Endrer border-farge ved fokus
+    outline: none; // Fjerner standard outline
+  }
+  &:hover {
+    border-color: #007bff; // Endrer border-farge ved hover
+  }
+}
+
+.contact-form-page input {
+  margin-bottom: 1rem;
+}
+.contact-form-page textarea {
+  resize: vertical;
+  height: 100px; /* Setter en fast høyde på tekstområdet */
+}
+
+.privacy-link {
+  margin-left: 1rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: 0.9rem;
+  margin-top: 0.5;
+  &:hover {
+    text-decoration: underline #1e90ff;
+  }
+}
+.form-submit {
+  display: flex;
+  justify-content: center; // Sentrerer send-knappen
+
+  button {
+    padding: 10px 30px;
+    border-radius: 20px; // Sterkt avrundede hjørner for knappen
+    border: none;
+    background-color: #1e90ff; // Blå bakgrunnsfarge for knappen
+    color: #fff;
+    border: 1px solid #1e90ff; // Legger til en subtil border
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #fff; // Mørkere blå farge ved hover
+      color: #1e90ff; // Hvit tekstfarge ved hover
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-details {
+    flex-direction: column !important;
+
+    /* Stabler elementene vertikalt på små skjermer */
+  }
+  .card-content {
+    flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+  }
+
+  .form-right {
+    padding: 20px; /* Legger til litt padding for å gi rom rundt innholdet */
+  }
+  .welcome-message h2 {
+    font-size: 1.5rem;
+  }
+  .optional-contact {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  .welcome-message p {
+    font-size: 0.9rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  }
+  .image-left img {
+    max-width: 50%; /* Lar bildets bredde justeres automatisk */
+    height: auto; /* Justerer høyden automatisk for å bevare aspektforholdet */
+  }
+
+  .form-right {
+    padding-top: 0; /* Fjerner topp-padding for skjemaet på små skjermer for å unngå for mye mellomrom etter bildet */
+  }
+
+  .contact-form-page input,
+  .contact-form-page button {
+    /* Trekker fra padding for å sikre at elementene ikke går utover sin container */
+    margin-bottom: 15px; /* Gir litt mellomrom mellom skjemaelementene */
+  }
+}
+@media (max-width: 480px) {
+  .welcome-message h2 {
+    font-size: 1.25rem;
+  }
+}
