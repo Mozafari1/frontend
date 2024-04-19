@@ -4,7 +4,7 @@ const getApiUrl = () => {
     if (protocol === 'http:' && hostname === 'localhost') {
     return 'http://localhost:4000';
   } else {
-    return 'https://inovix.no:4000'; // Endre til din faktiske produksjons-URL
+    return 'https://inovix-api-73d3ce207ac0.herokuapp.com'; // Endre til din faktiske produksjons-URL
   }
 };
 export default getApiUrl;
