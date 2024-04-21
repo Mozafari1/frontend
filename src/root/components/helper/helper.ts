@@ -4,7 +4,7 @@ const getApiUrl = () => {
     if (protocol === 'http:' && hostname === 'localhost') {
     return 'http://localhost:4000';
   } else {
-    return 'https://sea-lion-app-c3lho.ondigitalocean.app'; // Endre til din faktiske produksjons-URL
+    return 'http://localhost:4000'; // Endre til din faktiske produksjons-URL
   }
 };
 export default getApiUrl;
