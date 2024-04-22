@@ -39,6 +39,7 @@ const App: React.FC = () => {
   const [data, setData] = useState<IData>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  console.log(data);
   useEffect(() => {
     fetch(`${getApiUrl()}/get-logos`)
       .then((response) => {
@@ -57,6 +58,7 @@ const App: React.FC = () => {
         console.error("Error fetching logo data:", error);
       });
   }, []);
+  console.log(data);
   if (loading) {
     return <Loader />;
   }
