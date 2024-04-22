@@ -39,7 +39,6 @@ const App: React.FC = () => {
   const [data, setData] = useState<IData>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  console.log(data);
   useEffect(() => {
     fetch(`${getApiUrl()}/get-logos`)
       .then((response) => {
@@ -58,7 +57,7 @@ const App: React.FC = () => {
         console.error("Error fetching logo data:", error);
       });
   }, []);
-  console.log(data);
+
   if (loading) {
     return <Loader />;
   }
@@ -66,12 +65,13 @@ const App: React.FC = () => {
   if (error) {
     return <ErrorPage message={error} />;
   }
+
   return (
     <Router>
       <div className="app">
         {!isLoggedIn && (
           <Header
-            imgSrc={`${getApiUrl()}/images/${data.HeaderLogo[0].file_name}`}
+            imgSrc={`${getApiUrl()}/images/${data?.HeaderLogo[0]?.file_name}`}
           />
         )}
         <Routes>
@@ -81,20 +81,22 @@ const App: React.FC = () => {
               <>
                 <MainBanner
                   imgSrc={`${getApiUrl()}/images/${
-                    data.BannerMainPage[0].file_name
+                    data?.BannerMainPage[0]?.file_name
                   }`}
                 />
                 <SubBanner
-                  imgSrc={data.SubBannerMainPage.map((item) => item.file_name)}
+                  imgSrc={data?.SubBannerMainPage.map(
+                    (item) => item?.file_name
+                  )}
                 />
                 <ServiceSection
                   imgSrc={`${getApiUrl()}/images/${
-                    data.ServiceMainPage[0].file_name
+                    data?.ServiceMainPage[0]?.file_name
                   }`}
                 />
                 <AboutUsSection
                   imgSrc={`${getApiUrl()}/images/${
-                    data.AboutUsMainPage[0].file_name
+                    data?.AboutUsMainPage[0]?.file_name
                   }`}
                 />
                 <WhyChoosenUs />
@@ -112,7 +114,7 @@ const App: React.FC = () => {
             element={
               <AboutUs
                 imgSrc={`${getApiUrl()}/images/${
-                  data.AboutUsPage[0].file_name
+                  data?.AboutUsPage[0]?.file_name
                 }`}
               />
             }
@@ -122,7 +124,7 @@ const App: React.FC = () => {
             path="/privacy"
             element={
               <Privacy
-                imgSrc={`${getApiUrl()}/images/${data.Privacy[0].file_name}`}
+                imgSrc={`${getApiUrl()}/images/${data?.Privacy[0]?.file_name}`}
               />
             }
           />
@@ -147,7 +149,7 @@ const App: React.FC = () => {
           />
         </Routes>
         <Footer
-          imgSrc={`${getApiUrl()}/images/${data.FooterLogo[0].file_name}`}
+          imgSrc={`${getApiUrl()}/images/${data?.FooterLogo[0]?.file_name}`}
         />
       </div>
     </Router>
