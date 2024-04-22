@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
 
-interface IProps {
-  imgSrc?: string;
-}
-
-const Header: React.FC<IProps> = ({ imgSrc }) => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -17,7 +13,7 @@ const Header: React.FC<IProps> = ({ imgSrc }) => {
       <div className="header__container">
         <div className="header__logo">
           <a href="/">
-            <img src={imgSrc} alt="" />
+            <img src={"./logo.png"} alt="" />
           </a>
         </div>
         <nav className={`header__nav ${isOpen ? "header__nav--visible" : ""}`}>

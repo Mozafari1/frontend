@@ -1,9 +1,7 @@
 import React from "react";
 import "./css/ServiceSection.scss";
-interface IProps {
-  imgSrc: string;
-}
-const ServiceSection: React.FC<IProps> = ({ imgSrc }) => {
+
+const ServiceSection: React.FC = () => {
   return (
     <div className="our-service">
       <div className="container">
@@ -35,7 +33,11 @@ const ServiceSection: React.FC<IProps> = ({ imgSrc }) => {
         </div>
         <div className="our-service-right">
           <div className="our-service-image">
-            <object type="image/svg+xml" data={imgSrc} aria-label="service" />
+            <object
+              type="image/svg+xml"
+              data={"./webservice.svg"}
+              aria-label="service"
+            />
           </div>
         </div>
       </div>

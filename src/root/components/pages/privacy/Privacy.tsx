@@ -1,13 +1,15 @@
 import React from "react";
 import "./Privacy.scss";
-interface IProps {
-  imgSrc: string;
-}
-const Privacy: React.FC<IProps> = ({ imgSrc }) => {
+
+const Privacy: React.FC = () => {
   return (
     <div className="privacy-us-page">
       <div className="privacy-us-banner">
-        <object type="image/svg+xml" data={imgSrc} aria-label="banner" />
+        <object
+          type="image/svg+xml"
+          data={"./privacy.svg"}
+          aria-label="banner"
+        />
       </div>
       <div className="privacy-contents">
         <h2 className="privacy-title-page">Personvernerklæring for Inovix</h2>

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/SubBanner.scss";
-import getApiUrl from "../../helper/helper";
-interface IProps {
-  imgSrc: string[];
-}
-const SubBanner: React.FC<IProps> = ({ imgSrc }) => {
+const SubBanner: React.FC = () => {
+  const imgSrc = ["/website.svg", "marketing.svg", "ecommerce.svg"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -46,7 +43,7 @@ const SubBanner: React.FC<IProps> = ({ imgSrc }) => {
             <div className="services-image">
               <object
                 type="image/svg+xml"
-                data={`${getApiUrl()}/images/${imgSrc[currentIndex]}`}
+                data={`./${imgSrc[currentIndex]}`}
                 aria-label={`image-${currentIndex}`}
               />
             </div>
@@ -59,7 +56,7 @@ const SubBanner: React.FC<IProps> = ({ imgSrc }) => {
               >
                 <object
                   type="image/svg+xml"
-                  data={`${getApiUrl()}/images/${img}`}
+                  data={`./${img}`}
                   aria-label={`image-${index}`}
                 />
               </div>

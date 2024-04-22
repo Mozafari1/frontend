@@ -45,7 +45,7 @@ const Prices: React.FC = () => {
         <div className="price-us-banner">
           <object
             type="image/svg+xml"
-            data="/price-11.svg"
+            data="./price-11.svg"
             aria-label="banner"
           />
           <h2 className="price-us-title-page">

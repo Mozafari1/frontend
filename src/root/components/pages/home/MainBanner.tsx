@@ -1,10 +1,7 @@
 import React from "react";
 import "./css/MainBanner.scss";
-interface IProps {
-  imgSrc: string;
-}
 
-const MainBanner: React.FC<IProps> = ({ imgSrc }) => {
+const MainBanner: React.FC = () => {
   return (
     <div className="banner">
       <div className="banner__container">
@@ -26,7 +23,11 @@ const MainBanner: React.FC<IProps> = ({ imgSrc }) => {
           </button>
         </div>
         <div className="right">
-          <object type="image/svg+xml" data={imgSrc} aria-label="banner" />
+          <object
+            type="image/svg+xml"
+            data={"./banner.svg"}
+            aria-label="banner"
+          />
         </div>
       </div>
     </div>

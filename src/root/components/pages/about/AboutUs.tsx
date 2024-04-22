@@ -3,15 +3,16 @@ import "./css/AboutUs.scss";
 import CustomerSection from "../home/CustomerSection";
 import PartnerList from "../home/PartnerList";
 
-interface IProps {
-  imgSrc: string;
-}
-const AboutUs: React.FC<IProps> = ({ imgSrc }) => {
+const AboutUs: React.FC = () => {
   return (
     <>
       <div className="about-us-page">
         <div className="about-us-banner">
-          <object type="image/svg+xml" data={imgSrc} aria-label="banner" />
+          <object
+            type="image/svg+xml"
+            data={"./about2-2.svg"}
+            aria-label="banner"
+          />
           <h2 className="about-us-title-page">Om Oss</h2>
         </div>
         <div className="about-us-content-page">

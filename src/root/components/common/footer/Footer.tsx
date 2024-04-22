@@ -1,10 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 
-interface IProps {
-  imgSrc: string;
-}
-const Footer: React.FC<IProps> = ({ imgSrc }) => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
@@ -88,7 +85,7 @@ const Footer: React.FC<IProps> = ({ imgSrc }) => {
           <div className="footer-section">
             <img
               className="footer-logo"
-              src={imgSrc}
+              src={"./white-no-bg.png"}
               alt=""
               onClick={() => {
                 window.location.href = "/";

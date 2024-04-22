@@ -1,9 +1,7 @@
 import React from "react";
 import "./css/AboutUsSection.scss";
-interface IProps {
-  imgSrc: string;
-}
-const AboutUsSection: React.FC<IProps> = ({ imgSrc }) => {
+
+const AboutUsSection: React.FC = () => {
   return (
     <div className="about-us-section">
       <div className="about-us-content">
@@ -21,7 +19,11 @@ const AboutUsSection: React.FC<IProps> = ({ imgSrc }) => {
           </p>
         </div>
         <div className="about-us-image">
-          <object type="image/svg+xml" data={imgSrc} aria-label="banner" />
+          <object
+            type="image/svg+xml"
+            data={"./about-us-2.svg"}
+            aria-label="banner"
+          />
         </div>
       </div>
     </div>
