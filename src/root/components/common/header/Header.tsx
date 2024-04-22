@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.scss";
 
 interface IProps {
-  imgSrc: string;
+  imgSrc?: string;
 }
 
 const Header: React.FC<IProps> = ({ imgSrc }) => {

@@ -79,15 +79,13 @@ const App: React.FC = () => {
             path="/"
             element={
               <>
-                <MainBanner
+                {/* <MainBanner
                   imgSrc={`${getApiUrl()}/images/${
                     data?.BannerMainPage[0]?.file_name
                   }`}
                 />
                 <SubBanner
-                  imgSrc={data?.SubBannerMainPage.map(
-                    (item) => item?.file_name
-                  )}
+                  imgSrc={data?.SubBannerMainPage.map((item) => item?.file_name)}
                 />
                 <ServiceSection
                   imgSrc={`${getApiUrl()}/images/${
@@ -98,7 +96,7 @@ const App: React.FC = () => {
                   imgSrc={`${getApiUrl()}/images/${
                     data?.AboutUsMainPage[0]?.file_name
                   }`}
-                />
+                /> */}
                 <WhyChoosenUs />
                 <CustomerSection />
                 <PartnerList />
@@ -109,7 +107,7 @@ const App: React.FC = () => {
           />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/price" element={<Prices />} />
-          <Route
+          {/* <Route
             path="/about-us"
             element={
               <AboutUs
@@ -118,16 +116,16 @@ const App: React.FC = () => {
                 }`}
               />
             }
-          />
+          /> */}
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route
+          {/* <Route
             path="/privacy"
             element={
               <Privacy
                 imgSrc={`${getApiUrl()}/images/${data?.Privacy[0]?.file_name}`}
               />
             }
-          />
+          /> */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/portalReg" element={<PortalReg />} />
           <Route path="/portalLogin" element={<PortalLogin />} />
@@ -148,9 +146,9 @@ const App: React.FC = () => {
             }
           />
         </Routes>
-        <Footer
+        {/* <Footer
           imgSrc={`${getApiUrl()}/images/${data?.FooterLogo[0]?.file_name}`}
-        />
+        /> */}
       </div>
     </Router>
   );
