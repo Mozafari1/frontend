@@ -41,10 +41,10 @@
       text-align: center;
       margin-bottom: 25px; // Avstand mellom tittelen og skjemaet
       color: #003366;
-      font-size: 1.75rem;
+      font-size: 1.7rem;
     }
     .contact-intro {
-      font-size: 0.9rem; /* En lesbar skriftstørrelse for beskrivelsen */
+      font-size: 1.17rem; /* En lesbar skriftstørrelse for beskrivelsen */
       color: #003366; /* En myk farge for teksten */
       margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
     }
@@ -182,7 +182,7 @@
     }
   }
   .contact-us-title {
-    font-size: 1.5rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+    font-size: 1.3rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
   }
   .contact-intro {
     font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
@@ -190,9 +190,9 @@
 }
 @media (max-width: 480px) {
   .contact-us-title {
-    font-size: 1.25rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+    font-size: 1.2rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
   }
   .contact-intro {
-    font-size: 0.8rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
+    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
   }
 }

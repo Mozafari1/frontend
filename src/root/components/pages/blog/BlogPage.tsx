@@ -54,7 +54,7 @@ const BlogPage: React.FC = () => {
             &#215;
           </div>
           <img
-            src={`${getApiUrl()}/images/${blog.file_name}`}
+            src={`./${blog.file_name}`}
             alt={blog.title}
             className="blog-image"
           />

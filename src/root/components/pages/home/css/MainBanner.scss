@@ -23,14 +23,14 @@
   height: auto; /* Bevarer bildets aspektforhold */
 }
 .banner__headline {
-  font-size: 2rem; /* Stor og oppmerksomhetsvekkende skriftstørrelse for overskriften */
+  font-size: 1.7rem; /* Stor og oppmerksomhetsvekkende skriftstørrelse for overskriften */
   color: #003366; /* En mørk farge for kontrast og lesbarhet */
   margin-bottom: 20px; /* Definerer mellomrom mellom overskriften og underoverskriften */
-  font-weight: 600; /* Medium til fet skrift for å legge vekt på overskriften */
+  font-weight: bold; /* Medium til fet skrift for å legge vekt på overskriften */
 }
 
 .banner__tagline {
-  font-size: 1.25rem; /* En passende skriftstørrelse for underoverskriften for å komplementere overskriften */
+  font-size: 1.2rem; /* En passende skriftstørrelse for underoverskriften for å komplementere overskriften */
   color: #003366; /* En mykere farge for en elegant og subtil kontrast */
   margin-bottom: 30px; /* Mellomrom før CTA-knappen */
 }
@@ -69,10 +69,10 @@
 
 @media (max-width: 768px) {
   .banner__headline {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .banner__tagline {
-    font-size: 1.1rem; /* Litt mindre skriftstørrelse på mindre skjermer */
+    font-size: 1rem; /* Litt mindre skriftstørrelse på mindre skjermer */
     line-height: 1.3; /* Juster linjehøyden for bedre lesbarhet */
   }
   .banner__container {
@@ -92,10 +92,13 @@
 
 @media (max-width: 480px) {
   .banner__headline {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .banner__tagline {
     font-size: 1rem; /* Reduserer skriftstørrelsen ytterligere for veldig små skjermer */
+  }
+  .banner__services {
+    font-size: 0.9rem; /* Reduserer skriftstørrelsen for tjenesteoversikten på veldig små skjermer */
   }
   .banner__cta {
     padding: 10px 30px; /* Reduserer padding for veldig små skjermer */

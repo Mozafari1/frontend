@@ -78,8 +78,21 @@
   input {
     padding: 11px;
     width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 22px; // Avrundede hjørner for input-feltene
+    font-size: 12px;
+    font-size: normal;
+    color: #003366; // Tekstfarge for input-feltene
+    &:focus {
+      border-color: #007bff; // Endrer border-farge ved fokus
+      outline: none; // Fjerner standard outline
+    }
+    &:hover {
+      border-color: #007bff; // Endrer border-farge ved hover
+    }
   }
   button {
+    margin-left: 10px;
     margin-bottom: 0;
     padding: 8px 30px;
   }

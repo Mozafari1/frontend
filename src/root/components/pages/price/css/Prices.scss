@@ -29,7 +29,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #003366; /* Eller en annen farge som passer med bannerbildet */
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   z-index: 1;
 }
 
@@ -43,7 +43,7 @@
     p {
       margin: 0;
       color: #003366;
-      font-size: 1.1rem;
+      font-size: 1.17rem;
     }
   }
 }
@@ -171,7 +171,7 @@
     height: 12rem; /* Juster etter behov for ønsket høyde */
   }
   .price-us-title-page {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .price-us-content-page {
     padding: 20px 0; /* Vertikal padding */
@@ -185,7 +185,7 @@
 }
 @media (max-width: 480px) {
   .price-us-title-page {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   p {

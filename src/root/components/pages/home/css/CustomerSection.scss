@@ -17,12 +17,12 @@
     margin-bottom: 2rem; // Øker mellomrommet for bedre lesbarhet
   }
   .customer-section__title {
-    font-size: 1.75rem; // En passende skriftstørrelse for tittelen
+    font-size: 1.7rem; // En passende skriftstørrelse for tittelen
     color: #003366; // En sterk farge for tittelen
     margin-bottom: 25px; // Mellomrom mellom tittelen og beskrivelsen
   }
   .customer-section__description {
-    font-size: 1.1rem; // En lesbar skriftstørrelse for beskrivelsen
+    font-size: 1.17rem; // En lesbar skriftstørrelse for beskrivelsen
     color: #003366; // En myk farge for teksten
   }
   .carosel-customer {
@@ -68,7 +68,7 @@
   }
   .customer-section {
     &__title {
-      font-size: 1.5rem !important; // Øker skriftstørrelsen for tittelen på store skjermer
+      font-size: 1.3rem !important; // Øker skriftstørrelsen for tittelen på store skjermer
     }
     .customer-section__description {
       max-width: 100%; // Tillater beskrivelsen å fylle tilgjengelig bredde
@@ -80,7 +80,7 @@
 @media (max-width: 480px) {
   .customer-section {
     &__title {
-      font-size: 1.25rem !important; // Øker skriftstørrelsen for tittelen på mindre skjermer
+      font-size: 1.2rem !important; // Øker skriftstørrelsen for tittelen på mindre skjermer
     }
     .customer-section__description {
       font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer

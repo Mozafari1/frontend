@@ -20,13 +20,13 @@
     align-items: center; /* Senterer bildet vertikalt */
   }
   .our-service-title {
-    font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+    font-size: 1.7rem; /* En passende skriftstørrelse for tittelen */
     color: #003366; /* En sterk farge for tittelen */
     margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
   }
 
   .our-service-description {
-    font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+    font-size: 1.17rem; /* En lesbar skriftstørrelse for beskrivelsen */
     color: #003366; /* En myk farge for teksten */
     margin: auto; /* Sentrerer beskrivelsen */
     margin-bottom: 2rem; // Øker mellomrommet for bedre lesbarhet
@@ -69,7 +69,7 @@
 
 @media (max-width: 768px) {
   .our-service-title {
-    font-size: 1.5rem !important; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+    font-size: 1.3rem !important; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
   }
 
   .our-service-description {
@@ -97,7 +97,7 @@
     padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
   }
   .our-service-title {
-    font-size: 1.25rem !important; /* Reduserer skriftstørrelsen for tittelen på veldig små skjermer */
+    font-size: 1.2rem !important; /* Reduserer skriftstørrelsen for tittelen på veldig små skjermer */
   }
   .our-service-description {
     font-size: 0.9rem !important; /* Reduserer skriftstørrelsen for beskrivelsen på veldig små skjermer */

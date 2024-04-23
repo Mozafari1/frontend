@@ -3,7 +3,7 @@ import "./Header.scss";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const url = window.location.href;
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -18,13 +18,13 @@ const Header: React.FC = () => {
         </div>
         <nav className={`header__nav ${isOpen ? "header__nav--visible" : ""}`}>
           <ul className="nav-links">
-            <li>
+            <li className={url.includes("/service") ? "active-link" : ""}>
               <a href="/service">Tjenester</a>
             </li>
-            <li>
+            <li className={url.includes("/price") ? "active-link" : ""}>
               <a href="/price">Priser</a>
             </li>
-            <li>
+            <li className={url.includes("/about-us") ? "active-link" : ""}>
               <a href="/about-us">Om Oss</a>
             </li>
 

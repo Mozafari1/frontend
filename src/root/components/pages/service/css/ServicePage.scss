@@ -31,7 +31,7 @@
   color: #003366; /* Eller en annen farge som passer med bannerbildet */
   font-size: 2rem;
   z-index: 1;
-  font-size: 1.75rem;
+  font-size: 1.7rem;
 }
 .service-main-content-page {
   padding: 40px 0; /* Vertikal padding */
@@ -40,7 +40,7 @@
   color: #003366; /* Eller en annen farge som passer med bannerbildet */
 }
 .service-main-text-page {
-  font-size: 1.1rem;
+  font-size: 1.17rem;
 }
 
 @media (max-width: 768px) {
@@ -48,7 +48,7 @@
     height: 12rem; /* Juster etter behov for ønsket høyde */
   }
   .service-title-page {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .service-main-content-page {
     padding: 20px 0; /* Vertikal padding */
@@ -61,7 +61,7 @@
 
 @media (max-width: 480px) {
   .service-title-page {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .service-main-text-page {
     font-size: 0.9rem;

@@ -36,13 +36,13 @@
 }
 
 .why-us-title {
-  font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+  font-size: 1.7rem; /* En passende skriftstørrelse for tittelen */
   color: #003366; /* En sterk farge for tittelen */
   margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
 }
 
 .why-us-description {
-  font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  font-size: 1.17rem; /* En lesbar skriftstørrelse for beskrivelsen */
   color: #003366; /* En myk farge for teksten */
   max-width: 700px; /* Begrenser bredden for bedre lesbarhet */
   margin: auto 2.4rem auto auto; /* Mellomrom til høyre for bildet */
@@ -87,7 +87,7 @@
 
 @media (max-width: 768px) {
   .why-us-title {
-    font-size: 1.5rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+    font-size: 1.3rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
   }
 
   .why-us-description {
@@ -109,7 +109,7 @@
   }
 
   .why-us-title {
-    font-size: 1.25rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
+    font-size: 1.2rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
   }
 
   .why-us-description {

@@ -10,13 +10,13 @@
   padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
 }
 .unique-services-title {
-  font-size: 1.75rem; /* En passende skriftstørrelse for tittelen */
+  font-size: 1.7rem; /* En passende skriftstørrelse for tittelen */
   color: #003366; /* En sterk farge for tittelen */
   margin-bottom: 25px; /* Mellomrom mellom tittelen og beskrivelsen */
 }
 
 .unique-services-description {
-  font-size: 1.1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  font-size: 1.17rem; /* En lesbar skriftstørrelse for beskrivelsen */
   color: #003366; /* En myk farge for teksten */
   max-width: 670px; /* Begrenser bredden for bedre lesbarhet */
   margin: auto; /* Sentrerer beskrivelsen */
@@ -55,7 +55,7 @@
 /* Medieforespørsler for mindre skjermer */
 @media (max-width: 768px) {
   .unique-services-title {
-    font-size: 1.5rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
+    font-size: 1.3rem; /* Reduserer skriftstørrelsen for tittelen på mindre skjermer */
   }
 
   .unique-services-description {
@@ -70,7 +70,7 @@
   }
 
   .unique-services-title {
-    font-size: 1.25rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
+    font-size: 1.2rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
   }
 
   .unique-services-description {

@@ -29,7 +29,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #003366; /* Eller en annen farge som passer med bannerbildet */
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   z-index: 1;
 }
 
@@ -52,7 +52,7 @@
   p {
     margin: 0;
     color: #003366;
-    font-size: 1.1rem;
+    font-size: 1.17rem;
   }
   .join {
     margin-top: 1rem;
@@ -74,13 +74,13 @@
 
   li span:first-child {
     display: block; /* Gjør tittelen til et eget blokkelement */
-    font-size: 1.1rem; /* En passende skriftstørrelse for tittelen */
-
+    font-size: 1.17rem;
     margin-bottom: 5px; /* Litt avstand mellom tittel og beskrivelse */
     color: #969696; /* Mørk farge for tittelen for bedre lesbarhet */
   }
 
   li span:last-child {
+    font-size: 1.17rem;
     display: block; /* Sørger for at beskrivelsen også er sitt eget blokkelement */
     color: #003366; /* En mykere farge for beskrivelsen for et mer subtilt utseende */
   }
@@ -139,7 +139,7 @@
     height: 12rem; /* Juster etter behov for ønsket høyde */
   }
   .about-us-title-page {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .about-us-content-page {
     padding: 20px 0; /* Vertikal padding */
@@ -150,6 +150,12 @@
       font-size: 1rem;
     }
     p {
+      font-size: 1rem;
+    }
+    li span:first-child {
+      font-size: 1rem;
+    }
+    li span:last-child {
       font-size: 1rem;
     }
   }
@@ -171,12 +177,19 @@
 
 @media (max-width: 480px) {
   .about-us-title-page {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .about-us-text-page {
     padding: 2rem;
     .title {
+      font-size: 0.9rem;
+    }
+    li span:first-child {
+      font-size: 0.9rem;
+    }
+
+    li span:last-child {
       font-size: 0.9rem;
     }
     p {

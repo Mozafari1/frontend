@@ -305,7 +305,7 @@ const ServicePageCards: React.FC<IProps> = ({ data }) => {
         >
           <object
             type="image/svg+xml"
-            data={`${getApiUrl()}/images/${card.file_name}`}
+            data={`./${card.file_name}`}
             aria-label={card.title}
             className="card-image"
           />

@@ -10,6 +10,7 @@ interface IAddEditServiceProps {
   onSuccess: () => void;
 }
 const initialData = {
+  file_name: "",
   title: "",
   less_content: "",
   main_content: "",
@@ -45,6 +46,7 @@ const AddEditService: React.FC<IAddEditServiceProps> = ({
   useEffect(() => {
     if (is_edit && data) {
       setFormData({
+        file_name: data.file_name,
         title: data.title,
         less_content: data.less_content,
         main_content: data.main_content,
@@ -173,37 +175,38 @@ const AddEditService: React.FC<IAddEditServiceProps> = ({
           console.error("Error inserting data:", error);
         }
       } else {
-        const postData = new FormData();
-        postData.append("title", formData.title);
-        postData.append("less_content", formData.less_content);
-        postData.append("main_content", formData.main_content);
-        postData.append("sub_points_title", formData.sub_points_title);
-        postData.append("sub_title", formData.sub_title);
-        postData.append("sub_content", formData.sub_content);
-        postData.append("sub_point_titleA", formData.sub_point_titleA);
-        postData.append("sub_point_contentA", formData.sub_point_contentA);
-        postData.append("sub_point_titleB", formData.sub_point_titleB);
-        postData.append("sub_point_contentB", formData.sub_point_contentB);
-        postData.append("sub_point_titleC", formData.sub_point_titleC);
-        postData.append("sub_point_contentC", formData.sub_point_contentC);
-        postData.append("sub_point_titleD", formData.sub_point_titleD);
-        postData.append("sub_point_contentD", formData.sub_point_contentD);
-        postData.append("sub_point_titleE", formData.sub_point_titleE);
-        postData.append("sub_point_contentE", formData.sub_point_contentE);
-        postData.append("summary_title", formData.summary_title);
-        postData.append("summary_main_content", formData.summary_main_content);
-        postData.append("summary_sub_content", formData.summary_sub_content);
-        postData.append(
-          "summary_sub_sub_content",
-          formData.summary_sub_sub_content
-        );
-        if (image) {
-          postData.append("image", image);
-        }
+        // const postData = new FormData();
+        // postData.append("file_name", formData.file_name);
+        // postData.append("title", formData.title);
+        // postData.append("less_content", formData.less_content);
+        // postData.append("main_content", formData.main_content);
+        // postData.append("sub_points_title", formData.sub_points_title);
+        // postData.append("sub_title", formData.sub_title);
+        // postData.append("sub_content", formData.sub_content);
+        // postData.append("sub_point_titleA", formData.sub_point_titleA);
+        // postData.append("sub_point_contentA", formData.sub_point_contentA);
+        // postData.append("sub_point_titleB", formData.sub_point_titleB);
+        // postData.append("sub_point_contentB", formData.sub_point_contentB);
+        // postData.append("sub_point_titleC", formData.sub_point_titleC);
+        // postData.append("sub_point_contentC", formData.sub_point_contentC);
+        // postData.append("sub_point_titleD", formData.sub_point_titleD);
+        // postData.append("sub_point_contentD", formData.sub_point_contentD);
+        // postData.append("sub_point_titleE", formData.sub_point_titleE);
+        // postData.append("sub_point_contentE", formData.sub_point_contentE);
+        // postData.append("summary_title", formData.summary_title);
+        // postData.append("summary_main_content", formData.summary_main_content);
+        // postData.append("summary_sub_content", formData.summary_sub_content);
+        // postData.append(
+        //   "summary_sub_sub_content",
+        //   formData.summary_sub_sub_content
+        // );
+        // if (image) {
+        //   postData.append("image", image);
+        // }
         try {
           const response = await axios.post(
             `${apiUrl}/create-service`,
-            postData,
+            formData,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -231,7 +234,8 @@ const AddEditService: React.FC<IAddEditServiceProps> = ({
       case 1:
         return (
           <div>
-            <div className="image-input">
+            {/*    <div className="image-input">
+            
               {is_edit ? (
                 <input
                   type="file"
@@ -248,9 +252,20 @@ const AddEditService: React.FC<IAddEditServiceProps> = ({
                   onChange={handleImageChange}
                   required
                 />
-              )}
+              )} 
+            </div>*/}
+            <div>
+              <label htmlFor="file_name">Filnavn</label>
+              <input
+                type="text"
+                id="file_name"
+                name="file_name"
+                defaultValue={formData.file_name}
+                placeholder="Filnavn..."
+                required
+                onChange={handleInputChange}
+              />
             </div>
-
             <div>
               <label htmlFor="title">Hovedtittel</label>
               <input

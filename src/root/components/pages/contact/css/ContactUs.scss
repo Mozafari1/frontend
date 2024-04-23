@@ -50,11 +50,11 @@
 .welcome-message h2 {
   margin-bottom: 25px; // Avstand mellom tittelen og skjemaet
   color: #003366;
-  font-size: 1.75rem;
+  font-size: 1.7rem;
 }
 
 .welcome-message p {
-  font-size: 1rem; /* En lesbar skriftstørrelse for beskrivelsen */
+  font-size: 1.17rem; /* En lesbar skriftstørrelse for beskrivelsen */
   color: #003366; /* En myk farge for teksten */
   margin-bottom: 25px;
 }
@@ -89,7 +89,7 @@
   }
   p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.17rem;
     color: #003366;
   }
   .contact-details {
@@ -198,7 +198,7 @@
     padding: 20px; /* Legger til litt padding for å gi rom rundt innholdet */
   }
   .welcome-message h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .optional-contact {
     p {
@@ -225,6 +225,6 @@
 }
 @media (max-width: 480px) {
   .welcome-message h2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }

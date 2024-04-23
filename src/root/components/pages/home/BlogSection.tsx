@@ -115,7 +115,7 @@ const BlogSection: React.FC = () => {
                 }}
               >
                 <img
-                  src={`${getApiUrl()}/images/${blog.file_name}`}
+                  src={`./${blog.file_name}`}
                   alt={blog.title}
                   className="news-image"
                 />

@@ -3,6 +3,7 @@ import "../css/AddEditBlog.scss";
 import axios from "axios";
 import getApiUrl, { getToken } from "../../helper/helper";
 const initialForm = {
+  file_name: "",
   title: "",
   description: "",
   sub_description: "",
@@ -25,10 +26,10 @@ const AddEditBlog: React.FC<IAddEditBlogProps> = ({
   const [image, setImage] = useState<File | null>(null);
   const [formData, setFormData] = useState(initialForm);
 
-  useEffect(() => {}, []);
   useEffect(() => {
     if (is_edit && data) {
       setFormData({
+        file_name: data.file_name,
         title: data.title,
         description: data.description,
         sub_description: data.sub_description,
@@ -67,18 +68,18 @@ const AddEditBlog: React.FC<IAddEditBlogProps> = ({
             handleClear();
           }
         } else {
-          const postData = new FormData();
-          postData.append("title", formData.title);
-          postData.append("description", formData.description);
-          postData.append("sub_description", formData.sub_description);
-          postData.append("sub_sub_description", formData.sub_sub_description);
-          if (image) {
-            postData.append("image", image);
-          }
+          // const postData = new FormData();
+          // postData.append("title", formData.title);
+          // postData.append("description", formData.description);
+          // postData.append("sub_description", formData.sub_description);
+          // postData.append("sub_sub_description", formData.sub_sub_description);
+          // if (image) {
+          //   postData.append("image", image);
+          // }
           // Send POST request to server
-          const response = await axios.post(`${apiUrl}/create-blog`, postData, {
+          const response = await axios.post(`${apiUrl}/create-blog`, formData, {
             headers: {
-              "Content-Type": "multipart/form-data",
+              // "Content-Type": "multipart/form-data",
               Authorization: `Bearer ${token}`,
             },
           });
@@ -156,7 +157,7 @@ const AddEditBlog: React.FC<IAddEditBlogProps> = ({
       case 1:
         return (
           <div>
-            <div className="image-input">
+            {/* <div className="image-input">
               {is_edit ? (
                 <input
                   type="file"
@@ -173,6 +174,20 @@ const AddEditBlog: React.FC<IAddEditBlogProps> = ({
                   required
                 />
               )}
+            </div> */}
+            <div>
+              <label htmlFor="file_name" className="atom-required">
+                Filnavn
+              </label>
+              <input
+                type="text"
+                id="file_name"
+                name="file_name"
+                value={formData.file_name}
+                onChange={handleInputChange}
+                placeholder="Filnavn..."
+                required
+              />
             </div>
             <div>
               <label htmlFor="title" className="atom-required">
