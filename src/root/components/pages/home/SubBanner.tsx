@@ -1,28 +1,41 @@
 import React, { useEffect, useState } from "react";
+import Carousel from "react-slick";
+
 import "./css/SubBanner.scss";
 const SubBanner: React.FC = () => {
   const imgSrc = ["/website.svg", "marketing.svg", "ecommerce.svg"];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const [slidesToShow, setSlidesToShow] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const width = window.innerWidth;
+      if (width > 768) {
+        if (imgSrc.length >= 3) {
+          setSlidesToShow(3);
+        } else {
+          setSlidesToShow(imgSrc.length);
+        }
+      } else {
+        setSlidesToShow(1);
+      }
     };
 
+    handleResize();
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [imgSrc.length]);
 
-  useEffect(() => {
-    if (isMobile) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % imgSrc.length);
-      }, 5000);
+  const settings = {
+    infinite: imgSrc.length > slidesToShow, // Aktiverer infinite bare når det er flere kort enn slidesToShow
+    speed: 600,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    autoplay: imgSrc.length > 1, // Aktiverer autoplay bare når det er mer enn en omtale
+    autoplaySpeed: 2500,
+  };
 
-      return () => clearInterval(interval);
-    }
-  }, [isMobile, imgSrc.length]);
   return (
     <div className="unique-services-section">
       <div className="services-content">
@@ -38,17 +51,10 @@ const SubBanner: React.FC = () => {
           tilpassede strategier for hver kunde. La oss transformere din digitale
           visjon til virkelighet.
         </p>
+
         <div className="services-images">
-          {isMobile ? (
-            <div className="services-image">
-              <object
-                type="image/svg+xml"
-                data={`./${imgSrc[currentIndex]}`}
-                aria-label={`image-${currentIndex}`}
-              />
-            </div>
-          ) : (
-            imgSrc.map((img, index) => (
+          <Carousel {...settings}>
+            {imgSrc?.map((img: any, index) => (
               <div
                 id={`section-${index}`}
                 className="services-image"
@@ -60,8 +66,8 @@ const SubBanner: React.FC = () => {
                   aria-label={`image-${index}`}
                 />
               </div>
-            ))
-          )}
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>

@@ -24,18 +24,18 @@
 }
 .services-images {
   margin-top: 4rem;
-  display: flex;
-  justify-content: space-between; /* Fordeler mellomrom mellom elementene på store skjermer */
-  flex-wrap: wrap; /* Sørger for at elementene kan pakke på små skjermer */
+  width: 100%; /* Sørger for at elementene kan pakke på små skjermer */
+  .slick-slide {
+    display: flex;
+    justify-content: center; // Sentrerer kortene innenfor hver slide
+  }
 }
 
 .services-image {
-  flex-basis: calc(33.333% - 20px); /* Trekker fra eventuell margin/gap */
-  max-width: calc(33.333% - 20px); /* Justerer maksbredde tilsvarende */
   margin: 10px; /* Gir litt mellomrom mellom bildene */
   text-align: center; /* Sentrerer SVG-objektet */
   object {
-    max-width: 100%; /* Sørger for at bildet ikke overskrider sin container */
+    max-width: 100%; /* Sørger for at SVG-objektet ikke overstiger containeren */
     height: auto; /* Be varer bildets aspektforhold */
   }
 }
