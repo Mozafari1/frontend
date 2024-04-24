@@ -4,7 +4,7 @@ const getApiUrl = () => {
     if (protocol === 'http:' && hostname === 'localhost') {
     return 'http://localhost:4000';
   } else {
-    return 'https://api-26qu.onrender.com'; 
+    return 'https://inovix-api.onrender.com'; 
   }
 };
 export default getApiUrl;
