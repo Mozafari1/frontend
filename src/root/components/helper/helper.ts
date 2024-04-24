@@ -67,3 +67,8 @@ export const logoutUser = () => {
   localStorage.removeItem('token');
   window.location.href = getUrl();
 };
+
+export const formatPrice =(price:number) => {
+  const formattedPrice = price.toLocaleString('no-NB');
+  return formattedPrice;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/Web.scss";
 import { IPrice } from "./Prices";
+import { formatPrice } from "../../helper/helper";
 interface IProps {
   basis: IPrice;
   standard: IPrice;
@@ -12,9 +13,8 @@ const PriceCard: React.FC<IProps> = ({ basis, standard }) => {
       <div className="flex_content flex2">
         <h2 className="card-title-price">{basis.package_name}</h2>
         <h4 className="card-sub-title-price">{basis.title}</h4>
-        <span className="card-price">Kun {basis.price} Kr</span>
+        <span className="card-price">Kun {formatPrice(basis.price)} Kr</span>
         <p className="content">{basis.description}</p>
-
         <ul className="card-ul-list-price">
           <li>{basis.pointA}</li>
           <li>{basis.pointB}</li>
