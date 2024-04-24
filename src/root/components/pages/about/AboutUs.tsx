@@ -116,7 +116,7 @@ const AboutUs: React.FC = () => {
       </div>
       <div>
         <CustomerSection />
-        <PartnerList />
+        {/* <PartnerList /> */}
       </div>
     </>
   );

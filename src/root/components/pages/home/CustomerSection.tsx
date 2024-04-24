@@ -86,7 +86,7 @@ const CustomerSection: React.FC = () => {
             tilstedeværelse.
           </p>
         </div>
-        <div className="carosel-customer">
+        {/* <div className="carosel-customer">
           <Carousel {...settings}>
             {customerFeedbacks.map((feedback, index) => (
               <div key={index} className="feedback-card">
@@ -97,7 +97,7 @@ const CustomerSection: React.FC = () => {
               </div>
             ))}
           </Carousel>
-        </div>
+        </div> */}
       </div>
     </div>
   );

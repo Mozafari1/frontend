@@ -42,7 +42,7 @@ const App: React.FC = () => {
                 <AboutUsSection />
                 <WhyChoosenUs />
                 <CustomerSection />
-                <PartnerList />
+                {/* <PartnerList /> */}
                 <BlogSection />
                 <ContactSection />
               </>

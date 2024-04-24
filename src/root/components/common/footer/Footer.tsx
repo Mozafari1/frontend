@@ -100,21 +100,41 @@ const Footer: React.FC = () => {
               </a>
             </p>
 
-            <p>
+            <a href="tel:+47 402 96 867">
               <i className="fa-solid fa-phone icons-left" />
               +47 402 96 867
-            </p>
+            </a>
           </div>
           <div className="footer-section">
             <a href="/privacy">Personvernerklæring</a>
           </div>
           <div className="footer-section">
             <div className="social-links">
-              <i className="fa-brands fa-facebook-f" />
-              <i className="fa-brands fa-instagram" />
-              <i className="fa-brands fa-tiktok" />
-              <i className="fa-brands fa-x-twitter" />
-              <i className="fa-brands fa-linkedin" />
+              <p>Følg oss på sosiale medier</p>
+              <a
+                href="https://www.facebook.com/yourPage"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-facebook-f" />
+              </a>
+              <a
+                href="https://www.instagram.com/inovix.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-instagram" />
+              </a>
+
+              {/* <i className="fa-brands fa-tiktok" /> */}
+              {/* <i className="fa-brands fa-x-twitter" /> */}
+              <a
+                href="https://www.linkedin.com/in/yourProfile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-linkedin" />
+              </a>
             </div>
           </div>
         </div>

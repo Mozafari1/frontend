@@ -52,6 +52,7 @@
         margin: 0;
         margin-bottom: 10px;
         color: #ccc;
+        font-size: 1.17rem;
         text-decoration: none;
         cursor: pointer;
         &:hover {
@@ -60,6 +61,17 @@
       }
 
       .social-links {
+        a {
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 2rem;
+          color: #ccc;
+
+          &:hover {
+            color: #fff;
+          }
+        }
         i {
           cursor: pointer;
           display: inline-block;
