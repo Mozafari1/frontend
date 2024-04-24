@@ -96,6 +96,9 @@
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
   }
+  .active-link {
+    border-bottom: none !important;
+  }
   .nav-links {
     display: flex;
     flex-direction: column;
