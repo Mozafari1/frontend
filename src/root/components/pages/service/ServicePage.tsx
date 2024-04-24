@@ -62,18 +62,18 @@ const ServicePage: React.FC = () => {
       </div>
       <div className="service-main-content-page">
         <div className="service-main-text-page">
-          På Inovix er vi dedikerte til å tilby våre kunder skreddersydde
-          digitale løsninger som transformerer deres virksomhet. Våre tjenester
-          er utformet for å adressere de unike utfordringene og mulighetene
-          moderne bedrifter står overfor i det digitale landskapet. Fra estetisk
-          tiltalende nettsidedesign til robust mobilapputvikling, effektiv
-          e-handelsløsninger, pålitelig drift og vedlikehold, dynamisk digital
-          markedsføring, kreativ logo og branding, til avansert API-utvikling og
-          integrasjon, samt vår uovertrufne 24/7 tekniske støtte, sikrer vi at
-          din bedrift ikke bare overlever, men trives i den digitale æraen. Vårt
-          mål er å være den foretrukne partneren som forvandler din visjon til
-          virkelighet, med en tilnærming som blander innovasjon med effektivitet
-          for å levere målbare resultater.
+          Hos oss er vi dedikerte til å tilby våre kunder skreddersydde digitale
+          løsninger som forvandler deres virksomheter. Våre tjenester er
+          designet for å møte de særegne utfordringene og mulighetene som
+          moderne bedrifter møter i dagens digitale miljø. Vi tilbyr alt fra
+          estetisk tiltalende webdesign til robust utvikling av
+          mobilapplikasjoner, effektive e-handelsløsninger, pålitelig drift og
+          vedlikehold, dynamisk digital markedsføring, kreativ logo- og
+          brandingutvikling, til avansert API-utvikling og integrasjon. Med vår
+          uovertrufne 24/7 tekniske støtte sikrer vi at din bedrift ikke bare
+          overlever, men trives i den digitale æraen. Vårt mål er å være den
+          foretrukne partneren som forvandler din visjon til virkelighet, og vi
+          blander innovasjon med effektivitet for å levere målbare resultater.
         </div>
       </div>
       <ServicePageCards data={services} />
