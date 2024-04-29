@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/common/header/Header";
 import Footer from "./components/common/footer/Footer";
 import Prices from "./components/pages/price/Prices";
@@ -23,13 +28,23 @@ import ProtectedRoute from "./ProtectedRoute";
 import IndexDashboard from "./components/features/IndexDashboard";
 import FeedbackRoute from "./FeedbackRoute";
 import Feedback from "./components/pages/feedback/Feedback";
+import ReactGA from "react-ga";
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const TrackPageView = () => {
+    const location = useLocation();
+    useEffect(() => {
+      ReactGA.initialize("G-MX9LLJL5ES");
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+    }, [location]);
+    return null;
+  };
 
   return (
     <Router>
       <div className="app">
+        <TrackPageView />
         {!isLoggedIn && <Header />}
         <Routes>
           <Route
