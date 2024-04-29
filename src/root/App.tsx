@@ -29,6 +29,8 @@ import IndexDashboard from "./components/features/IndexDashboard";
 import FeedbackRoute from "./FeedbackRoute";
 import Feedback from "./components/pages/feedback/Feedback";
 import ReactGA from "react-ga";
+import CookieConsent from "react-cookie-consent";
+import CookieConsentComponent from "./components/cookies/Cookies";
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -88,6 +90,8 @@ const App: React.FC = () => {
             }
           />
         </Routes>
+        <CookieConsentComponent />
+
         <Footer />
       </div>
     </Router>
