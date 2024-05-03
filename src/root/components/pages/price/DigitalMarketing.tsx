@@ -62,7 +62,7 @@ const DigitalMarketing: React.FC<IProps> = ({ drift, marketing }) => {
           </ul>
           <button className="banner__cta">
             <a href="/contact-us">
-              Kontakt for en skreddersydd løsning
+              Kontakt for skreddersydd
               <i className="fa-solid fa-arrow-right icons-right" />
             </a>
           </button>
