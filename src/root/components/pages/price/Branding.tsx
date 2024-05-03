@@ -42,7 +42,7 @@ const Branding: React.FC<IProps> = ({ branding, support }) => {
 
       <div className="single-card-container">
         <div className="single-card-content">
-          <h2 className="card-title-price">24/7 Teknisk Støtte</h2>
+          <h2 className="card-title-price">24/ 7 Teknisk Støtte</h2>
           <p className="content">
             Hos Inovix forstår vi viktigheten av kontinuerlig og pålitelig
             støtte for din digitale tilstedeværelse. Vår 24/7 tekniske støtte er
