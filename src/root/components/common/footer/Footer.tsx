@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
             <div className="social-links">
               <p>Følg oss på sosiale medier</p>
               <a
-                href="https://www.facebook.com/yourPage"
+                href="https://www.facebook.com/profile.php?id=61559298239304"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
               {/* <i className="fa-brands fa-tiktok" /> */}
               {/* <i className="fa-brands fa-x-twitter" /> */}
               <a
-                href="https://www.linkedin.com/in/yourProfile"
+                href="https://www.linkedin.com/company/inovix-no/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
