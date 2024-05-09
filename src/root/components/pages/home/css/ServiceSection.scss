@@ -93,16 +93,7 @@
 }
 
 @media (max-width: 480px) {
-  .our-service {
-    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
-  }
   .our-service-title {
     font-size: 1.2rem !important; /* Reduserer skriftstørrelsen for tittelen på veldig små skjermer */
-  }
-  .our-service-description {
-    font-size: 0.9rem !important; /* Reduserer skriftstørrelsen for beskrivelsen på veldig små skjermer */
-  }
-  .our-service-list li {
-    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for listen på veldig små skjermer
   }
 }

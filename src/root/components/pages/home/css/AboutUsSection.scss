@@ -75,15 +75,7 @@
 }
 
 @media (max-width: 480px) {
-  .about-us-section {
-    padding: 30px 15px; /* Reduserer padding for veldig små skjermer */
-  }
-
   .about-us-title {
     font-size: 1.2rem; /* Ytterligere reduksjon av skriftstørrelsen for tittelen */
-  }
-
-  .about-us-description {
-    font-size: 0.9rem; /* Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet */
   }
 }

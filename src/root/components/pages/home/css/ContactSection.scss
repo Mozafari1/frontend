@@ -185,14 +185,11 @@
     font-size: 1.3rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
   }
   .contact-intro {
-    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
+    font-size: 1rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
   }
 }
 @media (max-width: 480px) {
   .contact-us-title {
     font-size: 1.2rem !important; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
-  }
-  .contact-intro {
-    font-size: 0.9rem !important; // Reduserer skriftstørrelsen for beskrivelsen på mindre skjermer
   }
 }

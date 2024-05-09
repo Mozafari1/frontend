@@ -77,6 +77,7 @@
   }
   .banner__container {
     flex-direction: column; /* Stabler `.left` og `.right` vertikalt på små skjermer */
+    text-align: center; /* Sentrerer innholdet på små skjermer */
   }
 
   .left,
@@ -98,7 +99,7 @@
     font-size: 1rem; /* Reduserer skriftstørrelsen ytterligere for veldig små skjermer */
   }
   .banner__services {
-    font-size: 0.9rem; /* Reduserer skriftstørrelsen for tjenesteoversikten på veldig små skjermer */
+    font-size: 1rem; /* Reduserer skriftstørrelsen for tjenesteoversikten på veldig små skjermer */
   }
   .banner__cta {
     padding: 10px 30px; /* Reduserer padding for veldig små skjermer */
