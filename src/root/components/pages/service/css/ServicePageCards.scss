@@ -111,7 +111,7 @@
       font-size: 1rem; // Reduserer skriftstørrelsen for tittelen
     }
     p {
-      font-size: 0.9rem; // Reduserer skriftstørrelsen for teksten
+      font-size: 1rem; // Reduserer skriftstørrelsen for teksten
     }
   }
   .card-body.active {
@@ -120,10 +120,10 @@
       font-size: 1.1rem; // Øker skriftstørrelsen for tittelen
     }
     h4 {
-      font-size: 0.9rem; // Øker skriftstørrelsen for undertittelen
+      font-size: 1rem; // Øker skriftstørrelsen for undertittelen
     }
     p {
-      font-size: 0.9rem; // Øker skriftstørrelsen for teksten
+      font-size: 1rem; // Øker skriftstørrelsen for teksten
     }
   }
 }
@@ -171,10 +171,10 @@
 @media (max-width: 768px) {
   .service-list-points {
     .points-title {
-      font-size: 0.9rem; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
+      font-size: 1rem; // Reduserer skriftstørrelsen for tittelen på mindre skjermer
     }
     .points-description {
-      font-size: 0.9rem; // Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet
+      font-size: 1rem; // Mindre skriftstørrelse for beskrivelsen for bedre lesbarhet
     }
   }
 }

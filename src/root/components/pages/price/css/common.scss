@@ -47,7 +47,7 @@
   margin: 0 auto;
   padding: 20px;
   .card-title-price {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 
   .card-sub-title-price {
@@ -64,6 +64,7 @@
   .content {
     margin: 1rem 0 0 0;
     font-size: 1rem;
+    color: #003366;
   }
   ul {
     padding-inline-start: 7%;
@@ -97,31 +98,27 @@
   }
 
   .card-title-price {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .card-sub-title-price {
     font-size: 1rem;
   }
   .card-price {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .content {
-    font-size: 0.9rem;
-    font-weight: lighter;
+    font-size: 1rem;
   }
   .card-ul-list-price {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .additional-costs-notice,
   .note {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .card-title-price {
-    font-size: 1.25rem;
-  }
-  .card-sub-title-price {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }

@@ -14,6 +14,9 @@
   .our-service-right {
     flex: 1; // Gjør at begge sider tar lik plass i containeren
   }
+  .our-service-left {
+    text-align: left;
+  }
   .our-service-right {
     display: flex; /* Bruker Flexbox for å sentrere bildet i `.right` */
     justify-content: center; /* Senterer bildet horisontalt */

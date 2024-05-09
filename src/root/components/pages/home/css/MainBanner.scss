@@ -11,7 +11,9 @@
   margin: 0 auto; /* Senterer containeren i banneret */
   padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
 }
-
+.left {
+  text-align: left;
+}
 .right {
   display: flex; /* Bruker Flexbox for å sentrere bildet i `.right` */
   justify-content: center; /* Senterer bildet horisontalt */
@@ -79,7 +81,9 @@
     flex-direction: column; /* Stabler `.left` og `.right` vertikalt på små skjermer */
     text-align: center; /* Sentrerer innholdet på små skjermer */
   }
-
+  .left {
+    text-align: center;
+  }
   .left,
   .right {
     flex: none; /* Nullstiller `flex` for å tillate naturlig bredde */

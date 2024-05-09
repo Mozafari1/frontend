@@ -13,7 +13,7 @@ const DigitalMarketing: React.FC<IProps> = ({ drift, marketing }) => {
           <h4 className="card-sub-title-price">
             Månedlig Abonnement for Kontinuerlig Service
           </h4>
-          <span className="card-price">Månedlig Abonnement: 1699 Kr</span>
+          <span className="card-price">Månedlig Abonnement: 999 Kr</span>
           <p className="content">
             Med vårt månedlige abonnement på drift og vedlikehold garanterer vi
             kontinuerlig optimalisering og sikkerhet for din nettløsning. For en
@@ -43,7 +43,7 @@ const DigitalMarketing: React.FC<IProps> = ({ drift, marketing }) => {
         <div className="single-card-content">
           <h2 className="card-title-price">Digital Markedsføring</h2>
           <h4 className="card-sub-title-price">Skreddersydd Markedsstrategi</h4>
-          <span className="card-price">Timepris: 1299 Kr</span>
+          <span className="card-price">Timepris: 899 Kr</span>
           <p className="content">
             Vår tilnærming til digital markedsføring er skreddersydd for å møte
             dine unike behov og mål. Vi tilbyr alt fra SEO, PPC,

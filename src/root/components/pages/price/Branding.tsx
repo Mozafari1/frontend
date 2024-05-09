@@ -10,7 +10,7 @@ const Branding: React.FC<IProps> = ({ branding, support }) => {
       <div className="single-card-container">
         <div className="single-card-content">
           <h2 className="card-title-price">Logo og Branding</h2>
-          <span className="card-price">Timepris: 1299 Kr</span>
+          <span className="card-price">Timepris: 899 Kr</span>
           <p className="content">
             Vårt team av kreative designere hjelper deg med å utvikle en unik
             logo og branding som gjenspeiler din virksomhets identitet og

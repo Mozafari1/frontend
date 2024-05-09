@@ -60,7 +60,7 @@ const PriceCard: React.FC<IProps> = ({ basis, standard }) => {
         <h4 className="card-sub-title-price">
           Utvidet Nettside Design og Utvikling
         </h4>
-        <span className="card-price">Fra 14 999 Kr</span>
+        <span className="card-price">Fra 9 999 Kr</span>
         <p className="content">
           Inovix Standard-pakken er skreddersydd for å løfte din digitale
           tilstedeværelse med avanserte funksjoner og unikt design. Starter fra

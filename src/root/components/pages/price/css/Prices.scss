@@ -179,16 +179,12 @@
   .price-us-text-page {
     padding: 2rem;
   }
-  p {
-    font-size: 1rem;
+  .price-us-text-page p {
+    font-size: 1rem !important;
   }
 }
 @media (max-width: 480px) {
   .price-us-title-page {
     font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.9rem;
   }
 }

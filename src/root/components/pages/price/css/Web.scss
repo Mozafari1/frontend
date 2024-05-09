@@ -19,9 +19,8 @@
   &_content {
     padding: 40px;
     flex: 1;
-
     .card-title-price {
-      font-size: 1.75rem;
+      font-size: 1.7rem;
     }
 
     .card-sub-title-price {
@@ -38,9 +37,10 @@
     .content {
       margin: 1rem 0 0 0;
       font-size: 1rem;
+      color: #003366;
     }
     ul {
-      padding-inline-start: 7%;
+      padding-inline-start: 2%;
       margin: 10% 0;
       list-style: none;
       font-size: 1rem;
@@ -78,27 +78,26 @@
     }
   }
   .card-title-price {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
   .card-sub-title-price {
     font-size: 1rem !important;
   }
   .card-price {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
   .content {
-    font-size: 0.9rem !important;
-    font-weight: lighter;
+    font-size: 1rem !important;
   }
   .card-ul-list-price {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
 }
 @media (max-width: 480px) {
   .card-title-price {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
   .card-sub-title-price {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
 }

@@ -13,7 +13,7 @@ const AppApi: React.FC<IProps> = ({ app, integration }) => {
           <h4 className="card-sub-title-price">
             Native & Cross-Plattform Løsninger
           </h4>
-          <span className="card-price">Timepris 1299 Kr</span>
+          <span className="card-price">Timepris 899 Kr</span>
           <p className="content">
             Hos Inovix tilbyr vi skreddersydde mobilappløsninger som møter dine
             spesifikke behov. Med vår ekspertise kan vi levere både native og
@@ -47,7 +47,7 @@ const AppApi: React.FC<IProps> = ({ app, integration }) => {
           <h4 className="card-sub-title-price">
             Effektiviser Din Digitale Arkitektur
           </h4>
-          <span className="card-price">Timepris 1399 Kr</span>
+          <span className="card-price">Timepris 999 Kr</span>
           <p className="content">
             Vårt team hos Inovix spesialiserer seg på å utvikle robuste
             API-løsninger som muliggjør sømløs integrasjon med
