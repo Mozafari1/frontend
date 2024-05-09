@@ -3,6 +3,7 @@ import "./css/ContactSection.scss";
 import Select from "react-select";
 import getApiUrl from "../../helper/helper";
 import axios from "axios";
+import Swal from "sweetalert2";
 const initialData = {
   name: "",
   email: "",
@@ -50,7 +51,14 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(state.email)) {
-      alert("Ugyldig e-postadresse");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Vennligst skriv inn en gyldig e-postadresse.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return;
     }
     const apiUrl = getApiUrl();
@@ -62,10 +70,25 @@ const ContactSection: React.FC = () => {
       .then((response) => {
         if (response.status === 201) {
           setState(initialData);
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Takk for din melding!",
+            text: "Vi vil kontakte deg så snart som mulig.",
+            showConfirmButton: false,
+            timer: 2000,
+          });
         }
       })
       .catch((error) => {
-        console.error("Error inserting contact:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Noe gikk galt. Vennligst prøv igjen senere.",
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
   return (

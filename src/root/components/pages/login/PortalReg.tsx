@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/PortalReg.scss";
 import axios from "axios";
 import getApiUrl from "../../helper/helper";
+import Swal from "sweetalert2";
 
 const PortalReg: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,14 +23,28 @@ const PortalReg: React.FC = () => {
     // Sjekk om alle feltene er fylt ut
     const { first_name, last_name, email, password, code } = formData;
     if (!first_name || !last_name || !email || !password || !code) {
-      alert("Vennligst fyll ut alle feltene");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Vennligst fyll ut alle feltene.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return;
     }
 
     // Sjekk om e-posten har riktig format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Vennligst oppgi en gyldig e-postadresse");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Vennligst skriv inn en gyldig e-postadresse.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return;
     }
 
@@ -37,9 +52,15 @@ const PortalReg: React.FC = () => {
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
-      alert(
-        "Passordet må være minst 8 tegn langt og inneholde minst en stor bokstav, en liten bokstav, et tall og et spesialtegn"
-      );
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Passordet må være minst 8 tegn langt og inneholde minst en stor bokstav, en liten bokstav, et tall og et spesialtegn",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+
       return;
     }
 
@@ -62,9 +83,15 @@ const PortalReg: React.FC = () => {
       }
     } catch (error) {
       // Hvis det oppstår en feil, vis feilmeldingen til brukeren
-      alert(
-        "Det oppstod en feil ved oppretting av brukeren. Prøv igjen senere."
-      );
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Det oppstod en feil ved oppretting av brukeren. Prøv igjen senere.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
       console.error("Error creating user:", error);
     }
   };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/Feedback.scss";
 import getApiUrl from "../../helper/helper";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Feedback: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +38,16 @@ const Feedback: React.FC = () => {
             role: "",
             feedback: "",
           });
+
           window.location.href = "/";
+          Swal.fire({
+            icon: "success",
+            title: "Takk for din tilbakemelding",
+            text: "Vi setter stor pris på din tilbakemelding og tar den med i betraktning for å forbedre våre tjenester. Takk for at du delte dine tanker med oss!",
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2000,
+          });
         })
         .catch((error) => {
           console.error("Error sending feedback:", error);

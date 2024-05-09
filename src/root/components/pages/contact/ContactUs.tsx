@@ -3,6 +3,7 @@ import "./css/ContactUsAnimation.scss";
 import "./css/ContactUs.scss";
 import getApiUrl from "../../helper/helper";
 import axios from "axios";
+import Swal from "sweetalert2";
 const ContactUs = () => {
   const initialData = {
     name: "",
@@ -24,7 +25,14 @@ const ContactUs = () => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(state.email)) {
-      alert("Ugyldig e-postadresse");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Vennligst skriv inn en gyldig e-postadresse.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return;
     }
     const apiUrl = getApiUrl();
@@ -37,6 +45,14 @@ const ContactUs = () => {
         if (response.status === 201) {
           setState(initialData);
         }
+        Swal.fire({
+          icon: "success",
+          title: "Takk for din melding",
+          text: "Vi vil kontakte deg så snart som mulig.",
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+        });
       })
       .catch((error) => {
         console.error("Error inserting contact:", error);
