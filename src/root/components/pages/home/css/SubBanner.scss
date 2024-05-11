@@ -5,13 +5,15 @@
   z-index: 1; /* Sørger for at seksjonen er foran bakgrunnsanimasjonen */
 }
 .services-content {
-  max-width: 670px; /* Begrenser maksimal bredde for bedre lesbarhet */
+  max-width: 1200px; /* Begrenser maksimal bredde for bedre lesbarhet */
   margin: 0 auto; /* Sentrerer containeren i banneret */
   padding: 0 20px; /* Padding på sidene for å unngå at innholdet berører kantene */
-  text-align: center;
-  text-align: left;
 }
-
+.content-part {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 670px;
+}
 .unique-services-title {
   font-size: 1.7rem; /* En passende skriftstørrelse for tittelen */
   color: #003366; /* En sterk farge for tittelen */

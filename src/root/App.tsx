@@ -1,10 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/common/header/Header";
 import Footer from "./components/common/footer/Footer";
 import Prices from "./components/pages/price/Prices";
@@ -28,30 +23,19 @@ import ProtectedRoute from "./ProtectedRoute";
 import IndexDashboard from "./components/features/IndexDashboard";
 import FeedbackRoute from "./FeedbackRoute";
 import Feedback from "./components/pages/feedback/Feedback";
-import ReactGA from "react-ga";
 import CookieConsentComponent from "./components/cookies/Cookies";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import {
-  GOOGLE_ANALYTICS_ID,
-  reCAPTCHA_SITE_KEY,
-} from "./components/helper/variable";
+import { reCAPTCHA_SITE_KEY } from "./components/helper/variable";
+import { TrackPageViews } from "./components/helper/helper";
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const TrackPageView = () => {
-    const location = useLocation();
-    useEffect(() => {
-      ReactGA.initialize(GOOGLE_ANALYTICS_ID);
-      ReactGA.send({ hitType: "pageview", page: location.pathname });
-    }, [location]);
-    return null;
-  };
 
   return (
     <GoogleReCaptchaProvider reCaptchaKey={reCAPTCHA_SITE_KEY}>
       <Router>
         <div className="app">
-          <TrackPageView />
+          <TrackPageViews />
           {!isLoggedIn && <Header />}
           <Routes>
             <Route

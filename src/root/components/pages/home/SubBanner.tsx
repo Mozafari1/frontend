@@ -39,18 +39,20 @@ const SubBanner: React.FC = () => {
   return (
     <div className="unique-services-section">
       <div className="services-content">
-        <h2 className="unique-services-title">
-          Skreddersydde Digitale Løsninger for Din Suksess
-        </h2>
-        <p className="unique-services-description">
-          Hos inovix, forstår vi verdien av sterk digital tilstedeværelse. Med
-          vår ekspertise designer vi responsive nettsider og dynamiske
-          nettbutikker, og implementerer målrettet digital markedsføring som
-          resonnerer med ditt publikum. Engasjement for kvalitet og innovasjon
-          står i sentrum av alt vi gjør, sikret gjennom personlig oppfølging og
-          tilpassede strategier for hver kunde. La oss transformere din digitale
-          visjon til virkelighet.
-        </p>
+        <div className="content-part">
+          <h2 className="unique-services-title">
+            Skreddersydde Digitale Løsninger for Din Suksess
+          </h2>
+          <p className="unique-services-description">
+            Hos inovix, forstår vi verdien av sterk digital tilstedeværelse. Med
+            vår ekspertise designer vi responsive nettsider og dynamiske
+            nettbutikker, og implementerer målrettet digital markedsføring som
+            resonnerer med ditt publikum. Engasjement for kvalitet og innovasjon
+            står i sentrum av alt vi gjør, sikret gjennom personlig oppfølging
+            og tilpassede strategier for hver kunde. La oss transformere din
+            digitale visjon til virkelighet.
+          </p>
+        </div>
 
         <div className="services-images">
           <Carousel {...settings}>

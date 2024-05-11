@@ -1,4 +1,6 @@
 import {jwtDecode} from 'jwt-decode';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 const getApiUrl = () => {
   const { protocol, hostname } = window.location;
     if (protocol === 'http:' && hostname === 'localhost') {
@@ -72,3 +74,20 @@ export const formatPrice =(price:number) => {
   const formattedPrice = price.toLocaleString('no-NB');
   return formattedPrice;
 }
+
+
+
+export const TrackPageViews = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname + location.search;
+    window.gtag('config', 'G-MX9LLJL5ES', {
+      'page_path': currentPath
+    });
+    console.log('Tracking page view for:', currentPath);
+  }, [location]);
+
+  return null;
+};
+
