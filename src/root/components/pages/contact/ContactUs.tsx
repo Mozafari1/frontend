@@ -4,7 +4,9 @@ import "./css/ContactUs.scss";
 import getApiUrl from "../../helper/helper";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 const ContactUs = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const initialData = {
     name: "",
     email: "",
@@ -35,12 +37,33 @@ const ContactUs = () => {
       });
       return;
     }
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
+    const token = await executeRecaptcha("contactForm");
+    if (!token) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Vennligst bekreft at du ikke er en robot.",
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+    // Legg til reCAPTCHA-token i tilstand
+    const formData = {
+      ...state,
+      recaptcha_token: token,
+    };
     const apiUrl = getApiUrl();
     if (!apiUrl) {
       return;
     }
     axios
-      .post(`${apiUrl}/create-inbox`, state)
+      .post(`${apiUrl}/create-inbox`, formData)
       .then((response) => {
         if (response.status === 201) {
           setState(initialData);
