@@ -29,72 +29,78 @@ import IndexDashboard from "./components/features/IndexDashboard";
 import FeedbackRoute from "./FeedbackRoute";
 import Feedback from "./components/pages/feedback/Feedback";
 import ReactGA from "react-ga";
-import CookieConsent from "react-cookie-consent";
 import CookieConsentComponent from "./components/cookies/Cookies";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import {
+  GOOGLE_ANALYTICS_ID,
+  reCAPTCHA_SITE_KEY,
+} from "./components/helper/variable";
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const TrackPageView = () => {
     const location = useLocation();
     useEffect(() => {
-      ReactGA.initialize("G-MX9LLJL5ES");
+      ReactGA.initialize(GOOGLE_ANALYTICS_ID);
       ReactGA.send({ hitType: "pageview", page: location.pathname });
     }, [location]);
     return null;
   };
 
   return (
-    <Router>
-      <div className="app">
-        <TrackPageView />
-        {!isLoggedIn && <Header />}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <MainBanner />
-                <SubBanner />
-                <ServiceSection />
-                <AboutUsSection />
-                <WhyChoosenUs />
-                <CustomerSection />
-                {/* <PartnerList /> */}
-                <BlogSection />
-                <ContactSection />
-              </>
-            }
-          />
-          <Route path="/service" element={<ServicePage />} />
-          <Route path="/price" element={<Prices />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/portalReg" element={<PortalReg />} />
-          <Route path="/portalLogin" element={<PortalLogin />} />
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute setIsLoggedIn={setIsLoggedIn}>
-                <IndexDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/feedback/:token"
-            element={
-              <FeedbackRoute>
-                <Feedback />
-              </FeedbackRoute>
-            }
-          />
-        </Routes>
-        <CookieConsentComponent />
+    <GoogleReCaptchaProvider reCaptchaKey={reCAPTCHA_SITE_KEY}>
+      <Router>
+        <div className="app">
+          <TrackPageView />
+          {!isLoggedIn && <Header />}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <MainBanner />
+                  <SubBanner />
+                  <ServiceSection />
+                  <AboutUsSection />
+                  <WhyChoosenUs />
+                  <CustomerSection />
+                  {/* <PartnerList /> */}
+                  <BlogSection />
+                  <ContactSection />
+                </>
+              }
+            />
+            <Route path="/service" element={<ServicePage />} />
+            <Route path="/price" element={<Prices />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/portalReg" element={<PortalReg />} />
+            <Route path="/portalLogin" element={<PortalLogin />} />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute setIsLoggedIn={setIsLoggedIn}>
+                  <IndexDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/feedback/:token"
+              element={
+                <FeedbackRoute>
+                  <Feedback />
+                </FeedbackRoute>
+              }
+            />
+          </Routes>
+          <CookieConsentComponent />
 
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+        </div>
+      </Router>
+    </GoogleReCaptchaProvider>
   );
 };
 
