@@ -64,7 +64,7 @@ const PriceCard: React.FC<IProps> = ({ basis, standard }) => {
         <p className="content">
           Inovix Standard-pakken er skreddersydd for å løfte din digitale
           tilstedeværelse med avanserte funksjoner og unikt design. Starter fra
-          14 999 Kr, tilbyr vi en konkurransedyktig timepris på 999 kr for
+          9 999 Kr, tilbyr vi en konkurransedyktig timepris på 999 kr for
           tilpasninger utover basispakken. Dette gjør pakken ideell for
           mellomstore til store bedrifter som trenger ekstra funksjoner som
           e-handelssystemer, integrerte løsninger, og dynamisk
