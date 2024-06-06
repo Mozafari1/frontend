@@ -22,7 +22,11 @@ const PriceCard: React.FC<IProps> = ({ basis, standard }) => {
           <li>{basis.pointD}</li>
           <li>{basis.pointE}</li>
         </ul>
-        <button className="banner__cta">
+        <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
           <a href="/contact-us">
             Kontakt for Basis
             <i className="fa-solid fa-arrow-right icons-right" />
@@ -79,7 +83,11 @@ const PriceCard: React.FC<IProps> = ({ basis, standard }) => {
           <li>Personlig konsultasjon for å sikre at alle behov møtes</li>
           <li>Tilgang til kontinuerlig teknisk støtte og vedlikehold</li>
         </ul>
-        <button className="banner__cta">
+        <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
           <a href="/contact-us">
             Kontakt for Standard
             <i className="fa-solid fa-arrow-right icons-right" />
