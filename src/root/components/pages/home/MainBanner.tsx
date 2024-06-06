@@ -15,7 +15,12 @@ const MainBanner: React.FC = () => {
           <p className="banner__services">
             Spesialister på Webdesign, Apputvikling, E-handel, og Mer
           </p>
-          <button className="banner__cta">
+          <button className="banner__cta" onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }
+          }>
             <a href="/contact-us">
               Ta Steget Videre – Kontakt Oss I Dag
               <i className="fa-solid fa-arrow-right icons-right" />
