@@ -33,7 +33,11 @@ const AppApi: React.FC<IProps> = ({ app, integration }) => {
             <li>Testing og kvalitetssikring for feilfri ytelse</li>
             <li>Markedslansering og kontinuerlig support</li>
           </ul>
-          <button className="banner__cta">
+          <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
             <a href="/contact-us">
               Kontakt for Mobil App Utvikling
               <i className="fa-solid fa-arrow-right icons-right" />
@@ -68,7 +72,11 @@ const AppApi: React.FC<IProps> = ({ app, integration }) => {
             Merk: Kostnader relatert til tredjepartstjenester er ikke inkludert
             og vil bli fakturert separat.
           </p>
-          <button className="banner__cta">
+          <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
             <a href="/contact-us">
               Kontakt for API Utvikling
               <i className="fa-solid fa-arrow-right icons-right" />
