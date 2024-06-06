@@ -31,7 +31,11 @@ const Branding: React.FC<IProps> = ({ branding, support }) => {
             <li>Markedsføringsmateriell og forretningsdokumenter</li>
             <li>Digital og trykt merkevarepakke</li>
           </ul>
-          <button className="banner__cta">
+          <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
             <a href="/contact-us">
               Kontakt for Logo og Branding
               <i className="fa-solid fa-arrow-right icons-right" />
@@ -57,7 +61,11 @@ const Branding: React.FC<IProps> = ({ branding, support }) => {
             hvilken pakke som best møter dine behov og for å få mer informasjon
             om våre konkurransesterke priser.
           </p>
-          <button className="banner__cta">
+          <button className="banner__cta"onClick={()=>{
+   window.location.assign(
+                                                    "/contact-us"
+                                                )
+    }>
             <a href="/contact-us">
               Kontakt for Støtte
               <i className="fa-solid fa-arrow-right icons-right" />
